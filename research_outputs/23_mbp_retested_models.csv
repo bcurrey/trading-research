@@ -1,0 +1,397 @@
+tier,conditions,entry_model,target_model,mbp_overlay,trades,winrate,profit_factor,net_points,avg_trade
+A,below_vwap & green_bar,10pt_pullback,20pt_target,tight_spread,265,0.6415,1.977,1680.0,6.34
+A,below_vwap & green_bar,10pt_pullback,20pt_target,tight_spread,265,0.6415,1.977,1680.0,6.34
+A,below_vwap & green_bar,10pt_pullback,20pt_target,tight_spread,265,0.6415,1.977,1680.0,6.34
+A,below_vwap & green_bar,10pt_pullback,20pt_target,tight_spread,265,0.6415,1.977,1680.0,6.34
+A,below_vwap & green_bar,10pt_pullback,20pt_target,NO_MBP_FILTER,273,0.6374,1.933,1680.0,6.15
+A,below_vwap & green_bar,10pt_pullback,20pt_target,NO_MBP_FILTER,273,0.6374,1.933,1680.0,6.15
+A,below_vwap & green_bar,10pt_pullback,20pt_target,NO_MBP_FILTER,273,0.6374,1.933,1680.0,6.15
+A,below_vwap & green_bar,10pt_pullback,20pt_target,NO_MBP_FILTER,273,0.6374,1.933,1680.0,6.15
+A,green_bar,15pt_pullback,20pt_target,tight_spread,424,0.6274,1.716,2220.0,5.24
+A,green_bar,15pt_pullback,20pt_target,tight_spread,424,0.6274,1.716,2220.0,5.24
+A,green_bar,15pt_pullback,20pt_target,tight_spread,424,0.6274,1.716,2220.0,5.24
+A,green_bar,15pt_pullback,20pt_target,tight_spread,424,0.6274,1.716,2220.0,5.24
+A,green_bar,15pt_pullback,20pt_target,tight_spread,424,0.6274,1.716,2220.0,5.24
+A,green_bar,15pt_pullback,20pt_target,tight_spread,424,0.6274,1.716,2220.0,5.24
+A,below_vwap,10pt_pullback,25pt_target,positive_quote_pressure,8,0.625,2.083,65.0,8.12
+A,below_vwap & large_premarket,10pt_pullback,25pt_target,positive_quote_pressure,8,0.625,2.083,65.0,8.12
+A,CORE_ONLY,10pt_pullback,20pt_target,positive_quote_pressure,16,0.625,1.667,80.0,5.0
+A,CORE_ONLY,10pt_pullback,20pt_target,positive_quote_pressure,16,0.625,1.667,80.0,5.0
+A,large_premarket,10pt_pullback,20pt_target,positive_quote_pressure,16,0.625,1.667,80.0,5.0
+A,large_premarket,10pt_pullback,20pt_target,positive_quote_pressure,16,0.625,1.667,80.0,5.0
+A,large_premarket,10pt_pullback,20pt_target,positive_quote_pressure,16,0.625,1.667,80.0,5.0
+A,CORE_ONLY,10pt_pullback,20pt_target,positive_quote_pressure,16,0.625,1.667,80.0,5.0
+A,large_premarket,10pt_pullback,20pt_target,positive_quote_pressure,16,0.625,1.667,80.0,5.0
+A,CORE_ONLY,10pt_pullback,20pt_target,positive_quote_pressure,16,0.625,1.667,80.0,5.0
+A,green_bar,15pt_pullback,20pt_target,NO_MBP_FILTER,441,0.619,1.655,2160.0,4.9
+A,green_bar,15pt_pullback,20pt_target,NO_MBP_FILTER,441,0.619,1.655,2160.0,4.9
+A,green_bar,15pt_pullback,20pt_target,NO_MBP_FILTER,441,0.619,1.655,2160.0,4.9
+A,green_bar,15pt_pullback,20pt_target,NO_MBP_FILTER,441,0.619,1.655,2160.0,4.9
+A,green_bar,15pt_pullback,20pt_target,NO_MBP_FILTER,441,0.619,1.655,2160.0,4.9
+A,green_bar,15pt_pullback,20pt_target,NO_MBP_FILTER,441,0.619,1.655,2160.0,4.9
+A,large_premarket,10pt_pullback,25pt_target,tight_spread,254,0.6181,2.023,1985.0,7.81
+A,large_premarket & green_bar,10pt_pullback,25pt_target,tight_spread,248,0.6169,2.013,1925.0,7.76
+A,large_premarket & green_bar,10pt_pullback,25pt_target,tight_spread,248,0.6169,2.013,1925.0,7.76
+A,large_premarket,10pt_pullback,25pt_target,NO_MBP_FILTER,272,0.614,1.988,2075.0,7.63
+A,green_bar,10pt_pullback,30pt_target,tight_spread,424,0.6085,2.404,4520.0,10.66
+A,large_premarket & green_bar,10pt_pullback,25pt_target,NO_MBP_FILTER,265,0.6075,1.935,1945.0,7.34
+A,large_premarket & green_bar,10pt_pullback,25pt_target,NO_MBP_FILTER,265,0.6075,1.935,1945.0,7.34
+A,CORE_ONLY,15pt_pullback,20pt_target,tight_spread,434,0.606,1.556,1880.0,4.33
+A,CORE_ONLY,15pt_pullback,20pt_target,tight_spread,434,0.606,1.556,1880.0,4.33
+A,CORE_ONLY,15pt_pullback,20pt_target,tight_spread,434,0.606,1.556,1880.0,4.33
+A,CORE_ONLY,15pt_pullback,20pt_target,tight_spread,434,0.606,1.556,1880.0,4.33
+A,CORE_ONLY,15pt_pullback,20pt_target,tight_spread,434,0.606,1.556,1880.0,4.33
+A,CORE_ONLY,15pt_pullback,20pt_target,tight_spread,434,0.606,1.556,1880.0,4.33
+A,low_volatility,5pt_pullback,20pt_target,tight_spread,152,0.6053,1.586,680.0,4.47
+A,low_volatility,15pt_pullback,20pt_target,tight_spread,152,0.6053,1.586,680.0,4.47
+A,low_volatility,15pt_pullback,20pt_target,tight_spread,152,0.6053,1.586,680.0,4.47
+A,low_volatility,15pt_pullback,20pt_target,NO_MBP_FILTER,152,0.6053,1.586,680.0,4.47
+A,low_volatility,15pt_pullback,20pt_target,NO_MBP_FILTER,152,0.6053,1.586,680.0,4.47
+A,low_volatility,5pt_pullback,20pt_target,NO_MBP_FILTER,152,0.6053,1.586,680.0,4.47
+A,low_volatility,15pt_pullback,20pt_target,tight_spread,152,0.6053,1.586,680.0,4.47
+A,low_volatility,5pt_pullback,20pt_target,tight_spread,152,0.6053,1.586,680.0,4.47
+A,low_volatility,15pt_pullback,20pt_target,NO_MBP_FILTER,152,0.6053,1.586,680.0,4.47
+A,low_volatility,5pt_pullback,20pt_target,NO_MBP_FILTER,152,0.6053,1.586,680.0,4.47
+A,low_volatility,15pt_pullback,20pt_target,NO_MBP_FILTER,152,0.6053,1.586,680.0,4.47
+A,low_volatility,15pt_pullback,20pt_target,tight_spread,152,0.6053,1.586,680.0,4.47
+A,low_volatility,15pt_pullback,20pt_target,NO_MBP_FILTER,152,0.6053,1.586,680.0,4.47
+A,low_volatility,15pt_pullback,20pt_target,tight_spread,152,0.6053,1.586,680.0,4.47
+A,green_bar,10pt_pullback,30pt_target,NO_MBP_FILTER,441,0.6032,2.347,4580.0,10.39
+A,below_vwap,10pt_pullback,25pt_target,NO_MBP_FILTER,287,0.6028,2.06,2225.0,7.75
+A,green_bar,10pt_pullback,30pt_target,positive_quote_pressure,15,0.6,2.25,150.0,10.0
+A,green_bar,10pt_pullback,30pt_target,positive_mid_pressure,15,0.6,2.25,150.0,10.0
+A,large_premarket & green_bar,10pt_pullback,30pt_target,positive_mid_pressure,15,0.6,2.25,150.0,10.0
+A,large_premarket & green_bar,10pt_pullback,30pt_target,positive_quote_pressure,15,0.6,2.25,150.0,10.0
+A,large_premarket & green_bar,10pt_pullback,25pt_target,positive_quote_pressure,15,0.6,1.875,105.0,7.0
+A,large_premarket & green_bar,10pt_pullback,25pt_target,positive_quote_pressure,15,0.6,1.875,105.0,7.0
+A,green_bar,10pt_pullback,25pt_target,positive_quote_pressure,15,0.6,1.875,105.0,7.0
+A,green_bar,10pt_pullback,20pt_target,positive_quote_pressure,15,0.6,1.5,60.0,4.0
+A,large_premarket & green_bar,10pt_pullback,20pt_target,positive_quote_pressure,15,0.6,1.5,60.0,4.0
+A,green_bar,10pt_pullback,20pt_target,positive_quote_pressure,15,0.6,1.5,60.0,4.0
+A,large_premarket & green_bar,10pt_pullback,20pt_target,positive_quote_pressure,15,0.6,1.5,60.0,4.0
+A,green_bar,10pt_pullback,20pt_target,positive_quote_pressure,15,0.6,1.5,60.0,4.0
+A,green_bar,10pt_pullback,20pt_target,positive_quote_pressure,15,0.6,1.5,60.0,4.0
+A,CORE_ONLY,10pt_pullback,30pt_target,tight_spread,434,0.5991,2.321,4440.0,10.23
+A,CORE_ONLY,10pt_pullback,30pt_target,NO_MBP_FILTER,452,0.5973,2.301,4580.0,10.13
+A,CORE_ONLY,15pt_pullback,20pt_target,NO_MBP_FILTER,452,0.5973,1.5,1800.0,3.98
+A,CORE_ONLY,15pt_pullback,20pt_target,NO_MBP_FILTER,452,0.5973,1.5,1800.0,3.98
+A,CORE_ONLY,15pt_pullback,20pt_target,NO_MBP_FILTER,452,0.5973,1.5,1800.0,3.98
+A,CORE_ONLY,15pt_pullback,20pt_target,NO_MBP_FILTER,452,0.5973,1.5,1800.0,3.98
+A,CORE_ONLY,15pt_pullback,20pt_target,NO_MBP_FILTER,452,0.5973,1.5,1800.0,3.98
+A,CORE_ONLY,15pt_pullback,20pt_target,NO_MBP_FILTER,452,0.5973,1.5,1800.0,3.98
+A,below_vwap,10pt_pullback,25pt_target,tight_spread,278,0.5971,2.015,2090.0,7.52
+A,below_vwap & large_premarket,10pt_pullback,25pt_target,NO_MBP_FILTER,170,0.5882,1.812,1120.0,6.59
+A,large_premarket & green_bar,15pt_pullback,20pt_target,tight_spread,248,0.5847,1.408,840.0,3.39
+A,large_premarket & green_bar,5pt_pullback,20pt_target,tight_spread,248,0.5847,1.408,840.0,3.39
+A,large_premarket & green_bar,15pt_pullback,20pt_target,tight_spread,248,0.5847,1.408,840.0,3.39
+A,large_premarket & green_bar,15pt_pullback,20pt_target,tight_spread,248,0.5847,1.408,840.0,3.39
+A,large_premarket & green_bar,15pt_pullback,20pt_target,tight_spread,248,0.5847,1.408,840.0,3.39
+A,large_premarket & green_bar,15pt_pullback,20pt_target,tight_spread,248,0.5847,1.408,840.0,3.39
+A,large_premarket & green_bar,15pt_pullback,20pt_target,tight_spread,248,0.5847,1.408,840.0,3.39
+A,large_premarket & green_bar,5pt_pullback,20pt_target,tight_spread,248,0.5847,1.408,840.0,3.39
+A+,low_volatility,10pt_pullback,20pt_target,NO_MBP_FILTER,152,0.7632,3.314,1620.0,10.66
+A+,low_volatility,10pt_pullback,20pt_target,tight_spread,152,0.7632,3.314,1620.0,10.66
+A+,low_volatility,10pt_pullback,20pt_target,NO_MBP_FILTER,152,0.7632,3.314,1620.0,10.66
+A+,low_volatility,10pt_pullback,20pt_target,tight_spread,152,0.7632,3.314,1620.0,10.66
+A+,below_vwap & large_premarket,10pt_pullback,20pt_target,positive_quote_pressure,8,0.75,3.0,80.0,10.0
+A+,below_vwap & large_premarket,10pt_pullback,20pt_target,positive_quote_pressure,8,0.75,3.0,80.0,10.0
+A+,below_vwap,10pt_pullback,20pt_target,positive_quote_pressure,8,0.75,3.0,80.0,10.0
+A+,below_vwap,10pt_pullback,20pt_target,positive_quote_pressure,8,0.75,3.0,80.0,10.0
+A+,below_vwap,10pt_pullback,20pt_target,positive_quote_pressure,8,0.75,3.0,80.0,10.0
+A+,below_vwap,10pt_pullback,20pt_target,positive_quote_pressure,8,0.75,3.0,80.0,10.0
+A+,CORE_ONLY,10pt_pullback,20pt_target,tight_spread,434,0.7327,2.765,4060.0,9.35
+A+,CORE_ONLY,10pt_pullback,20pt_target,tight_spread,434,0.7327,2.765,4060.0,9.35
+A+,CORE_ONLY,10pt_pullback,20pt_target,tight_spread,434,0.7327,2.765,4060.0,9.35
+A+,CORE_ONLY,10pt_pullback,20pt_target,tight_spread,434,0.7327,2.765,4060.0,9.35
+A+,green_bar,10pt_pullback,20pt_target,tight_spread,424,0.7264,2.655,3840.0,9.06
+A+,green_bar,10pt_pullback,20pt_target,tight_spread,424,0.7264,2.655,3840.0,9.06
+A+,green_bar,10pt_pullback,20pt_target,tight_spread,424,0.7264,2.655,3840.0,9.06
+A+,green_bar,10pt_pullback,20pt_target,tight_spread,424,0.7264,2.655,3840.0,9.06
+A+,CORE_ONLY,10pt_pullback,20pt_target,NO_MBP_FILTER,452,0.7257,2.667,4100.0,9.07
+A+,CORE_ONLY,10pt_pullback,20pt_target,NO_MBP_FILTER,452,0.7257,2.667,4100.0,9.07
+A+,CORE_ONLY,10pt_pullback,20pt_target,NO_MBP_FILTER,452,0.7257,2.667,4100.0,9.07
+A+,CORE_ONLY,10pt_pullback,20pt_target,NO_MBP_FILTER,452,0.7257,2.667,4100.0,9.07
+A+,green_bar,10pt_pullback,20pt_target,NO_MBP_FILTER,441,0.7166,2.528,3820.0,8.66
+A+,green_bar,10pt_pullback,20pt_target,NO_MBP_FILTER,441,0.7166,2.528,3820.0,8.66
+A+,green_bar,10pt_pullback,20pt_target,NO_MBP_FILTER,441,0.7166,2.528,3820.0,8.66
+A+,green_bar,10pt_pullback,20pt_target,NO_MBP_FILTER,441,0.7166,2.528,3820.0,8.66
+A+,large_premarket,10pt_pullback,20pt_target,tight_spread,254,0.7087,2.432,2120.0,8.35
+A+,large_premarket,10pt_pullback,20pt_target,tight_spread,254,0.7087,2.432,2120.0,8.35
+A+,large_premarket,10pt_pullback,20pt_target,tight_spread,254,0.7087,2.432,2120.0,8.35
+A+,large_premarket,10pt_pullback,20pt_target,tight_spread,254,0.7087,2.432,2120.0,8.35
+A+,large_premarket,10pt_pullback,20pt_target,NO_MBP_FILTER,272,0.6985,2.317,2160.0,7.94
+A+,large_premarket,10pt_pullback,20pt_target,NO_MBP_FILTER,272,0.6985,2.317,2160.0,7.94
+A+,large_premarket,10pt_pullback,20pt_target,NO_MBP_FILTER,272,0.6985,2.317,2160.0,7.94
+A+,large_premarket,10pt_pullback,20pt_target,NO_MBP_FILTER,272,0.6985,2.317,2160.0,7.94
+A+,below_vwap,10pt_pullback,20pt_target,NO_MBP_FILTER,287,0.6934,2.427,2340.0,8.15
+A+,below_vwap,10pt_pullback,20pt_target,NO_MBP_FILTER,287,0.6934,2.427,2340.0,8.15
+A+,below_vwap,10pt_pullback,20pt_target,NO_MBP_FILTER,287,0.6934,2.427,2340.0,8.15
+A+,below_vwap,10pt_pullback,20pt_target,NO_MBP_FILTER,287,0.6934,2.427,2340.0,8.15
+A+,below_vwap,10pt_pullback,20pt_target,tight_spread,278,0.6906,2.4,2240.0,8.06
+A+,below_vwap,10pt_pullback,20pt_target,tight_spread,278,0.6906,2.4,2240.0,8.06
+A+,below_vwap,10pt_pullback,20pt_target,tight_spread,278,0.6906,2.4,2240.0,8.06
+A+,below_vwap,10pt_pullback,20pt_target,tight_spread,278,0.6906,2.4,2240.0,8.06
+A+,large_premarket & green_bar,10pt_pullback,20pt_target,tight_spread,248,0.6815,2.139,1800.0,7.26
+A+,large_premarket & green_bar,10pt_pullback,20pt_target,tight_spread,248,0.6815,2.139,1800.0,7.26
+A+,low_volatility,10pt_pullback,25pt_target,NO_MBP_FILTER,152,0.6776,2.799,1655.0,10.89
+A+,low_volatility,10pt_pullback,25pt_target,tight_spread,152,0.6776,2.799,1655.0,10.89
+A+,below_vwap & large_premarket,10pt_pullback,20pt_target,NO_MBP_FILTER,170,0.6706,2.073,1180.0,6.94
+A+,below_vwap & large_premarket,10pt_pullback,20pt_target,NO_MBP_FILTER,170,0.6706,2.073,1180.0,6.94
+A+,large_premarket & green_bar,10pt_pullback,20pt_target,NO_MBP_FILTER,265,0.6679,2.011,1780.0,6.72
+A+,large_premarket & green_bar,10pt_pullback,20pt_target,NO_MBP_FILTER,265,0.6679,2.011,1780.0,6.72
+A+,green_bar,10pt_pullback,25pt_target,positive_mid_pressure,15,0.6667,2.5,150.0,10.0
+A+,large_premarket & green_bar,10pt_pullback,25pt_target,positive_mid_pressure,15,0.6667,2.5,150.0,10.0
+A+,large_premarket & green_bar,10pt_pullback,25pt_target,positive_mid_pressure,15,0.6667,2.5,150.0,10.0
+A+,large_premarket & green_bar,10pt_pullback,20pt_target,positive_mid_pressure,15,0.6667,2.0,100.0,6.67
+A+,green_bar,10pt_pullback,20pt_target,positive_mid_pressure,15,0.6667,2.0,100.0,6.67
+A+,green_bar,10pt_pullback,20pt_target,positive_mid_pressure,15,0.6667,2.0,100.0,6.67
+A+,green_bar,10pt_pullback,20pt_target,positive_mid_pressure,15,0.6667,2.0,100.0,6.67
+A+,green_bar,10pt_pullback,20pt_target,positive_mid_pressure,15,0.6667,2.0,100.0,6.67
+A+,large_premarket & green_bar,10pt_pullback,20pt_target,positive_mid_pressure,15,0.6667,2.0,100.0,6.67
+A+,below_vwap & large_premarket,10pt_pullback,20pt_target,tight_spread,161,0.6646,2.019,1080.0,6.71
+A+,below_vwap & large_premarket,10pt_pullback,20pt_target,tight_spread,161,0.6646,2.019,1080.0,6.71
+A+,green_bar,10pt_pullback,25pt_target,tight_spread,424,0.6604,2.482,4180.0,9.86
+A+,CORE_ONLY,10pt_pullback,25pt_target,tight_spread,434,0.6567,2.44,4205.0,9.69
+A+,green_bar,10pt_pullback,25pt_target,NO_MBP_FILTER,441,0.6531,2.4,4200.0,9.52
+A+,CORE_ONLY,10pt_pullback,25pt_target,NO_MBP_FILTER,452,0.6527,2.394,4295.0,9.5
+B,large_premarket,15pt_pullback,20pt_target,tight_spread,254,0.5787,1.374,800.0,3.15
+B,large_premarket,15pt_pullback,20pt_target,tight_spread,254,0.5787,1.374,800.0,3.15
+B,large_premarket,15pt_pullback,20pt_target,tight_spread,254,0.5787,1.374,800.0,3.15
+B,large_premarket,15pt_pullback,20pt_target,tight_spread,254,0.5787,1.374,800.0,3.15
+B,large_premarket,15pt_pullback,20pt_target,tight_spread,254,0.5787,1.374,800.0,3.15
+B,large_premarket,15pt_pullback,20pt_target,tight_spread,254,0.5787,1.374,800.0,3.15
+B,below_vwap & large_premarket,10pt_pullback,25pt_target,tight_spread,161,0.5776,1.735,985.0,6.12
+B,large_premarket & green_bar,10pt_pullback,30pt_target,tight_spread,248,0.5766,2.062,2210.0,8.91
+B,large_premarket & green_bar,15pt_pullback,20pt_target,NO_MBP_FILTER,265,0.5736,1.345,780.0,2.94
+B,large_premarket & green_bar,15pt_pullback,20pt_target,NO_MBP_FILTER,265,0.5736,1.345,780.0,2.94
+B,large_premarket & green_bar,15pt_pullback,20pt_target,NO_MBP_FILTER,265,0.5736,1.345,780.0,2.94
+B,large_premarket & green_bar,5pt_pullback,20pt_target,NO_MBP_FILTER,265,0.5736,1.345,780.0,2.94
+B,large_premarket & green_bar,15pt_pullback,20pt_target,NO_MBP_FILTER,265,0.5736,1.345,780.0,2.94
+B,large_premarket & green_bar,5pt_pullback,20pt_target,NO_MBP_FILTER,265,0.5736,1.345,780.0,2.94
+B,large_premarket & green_bar,15pt_pullback,20pt_target,NO_MBP_FILTER,265,0.5736,1.345,780.0,2.94
+B,large_premarket & green_bar,15pt_pullback,20pt_target,NO_MBP_FILTER,265,0.5736,1.345,780.0,2.94
+B,large_premarket,10pt_pullback,30pt_target,tight_spread,254,0.5709,2.014,2190.0,8.62
+B,large_premarket,10pt_pullback,30pt_target,NO_MBP_FILTER,272,0.5699,2.004,2330.0,8.57
+B,large_premarket & green_bar,10pt_pullback,30pt_target,NO_MBP_FILTER,265,0.5698,2.004,2270.0,8.57
+B,green_bar,15pt_pullback,25pt_target,tight_spread,424,0.5684,1.692,2465.0,5.81
+B,green_bar,5pt_pullback,25pt_target,tight_spread,424,0.5684,1.692,2465.0,5.81
+B,green_bar,5pt_pullback,25pt_target,tight_spread,424,0.5684,1.692,2465.0,5.81
+B,large_premarket,15pt_pullback,20pt_target,NO_MBP_FILTER,272,0.5662,1.305,720.0,2.65
+B,large_premarket,15pt_pullback,20pt_target,NO_MBP_FILTER,272,0.5662,1.305,720.0,2.65
+B,large_premarket,15pt_pullback,20pt_target,NO_MBP_FILTER,272,0.5662,1.305,720.0,2.65
+B,large_premarket,15pt_pullback,20pt_target,NO_MBP_FILTER,272,0.5662,1.305,720.0,2.65
+B,large_premarket,15pt_pullback,20pt_target,NO_MBP_FILTER,272,0.5662,1.305,720.0,2.65
+B,large_premarket,15pt_pullback,20pt_target,NO_MBP_FILTER,272,0.5662,1.305,720.0,2.65
+B,CORE_ONLY,10pt_pullback,30pt_target,positive_quote_pressure,16,0.5625,1.929,130.0,8.12
+B,large_premarket,10pt_pullback,30pt_target,positive_quote_pressure,16,0.5625,1.929,130.0,8.12
+B,CORE_ONLY,10pt_pullback,25pt_target,positive_quote_pressure,16,0.5625,1.607,85.0,5.31
+B,large_premarket,10pt_pullback,25pt_target,positive_quote_pressure,16,0.5625,1.607,85.0,5.31
+B,green_bar,5pt_pullback,25pt_target,NO_MBP_FILTER,441,0.5624,1.649,2440.0,5.53
+B,green_bar,15pt_pullback,25pt_target,NO_MBP_FILTER,441,0.5624,1.649,2440.0,5.53
+B,green_bar,5pt_pullback,25pt_target,NO_MBP_FILTER,441,0.5624,1.649,2440.0,5.53
+B,below_vwap & green_bar,10pt_pullback,25pt_target,tight_spread,265,0.5585,1.796,1640.0,6.19
+B,below_vwap,5pt_pullback,20pt_target,tight_spread,278,0.5576,1.348,800.0,2.88
+B,below_vwap,15pt_pullback,20pt_target,tight_spread,278,0.5576,1.348,800.0,2.88
+B,below_vwap,15pt_pullback,20pt_target,tight_spread,278,0.5576,1.348,800.0,2.88
+B,below_vwap,15pt_pullback,20pt_target,tight_spread,278,0.5576,1.348,800.0,2.88
+B,below_vwap,5pt_pullback,20pt_target,tight_spread,278,0.5576,1.348,800.0,2.88
+B,below_vwap,15pt_pullback,20pt_target,tight_spread,278,0.5576,1.348,800.0,2.88
+B,below_vwap,5pt_pullback,20pt_target,NO_MBP_FILTER,287,0.5575,1.345,820.0,2.86
+B,below_vwap,15pt_pullback,20pt_target,NO_MBP_FILTER,287,0.5575,1.345,820.0,2.86
+B,below_vwap,5pt_pullback,20pt_target,NO_MBP_FILTER,287,0.5575,1.345,820.0,2.86
+B,below_vwap,15pt_pullback,20pt_target,NO_MBP_FILTER,287,0.5575,1.345,820.0,2.86
+B,below_vwap,15pt_pullback,20pt_target,NO_MBP_FILTER,287,0.5575,1.345,820.0,2.86
+B,below_vwap,15pt_pullback,20pt_target,NO_MBP_FILTER,287,0.5575,1.345,820.0,2.86
+B,below_vwap & green_bar,10pt_pullback,25pt_target,NO_MBP_FILTER,273,0.5568,1.776,1660.0,6.08
+B,CORE_ONLY,5pt_pullback,25pt_target,tight_spread,434,0.5461,1.535,2065.0,4.76
+B,CORE_ONLY,5pt_pullback,25pt_target,tight_spread,434,0.5461,1.535,2065.0,4.76
+B,CORE_ONLY,15pt_pullback,25pt_target,tight_spread,434,0.5461,1.535,2065.0,4.76
+B,CORE_ONLY,5pt_pullback,25pt_target,NO_MBP_FILTER,452,0.5398,1.495,2020.0,4.47
+B,CORE_ONLY,15pt_pullback,25pt_target,NO_MBP_FILTER,452,0.5398,1.495,2020.0,4.47
+B,CORE_ONLY,5pt_pullback,25pt_target,NO_MBP_FILTER,452,0.5398,1.495,2020.0,4.47
+B,low_volatility,5pt_pullback,25pt_target,NO_MBP_FILTER,152,0.5395,1.53,710.0,4.67
+B,low_volatility,5pt_pullback,25pt_target,tight_spread,152,0.5395,1.53,710.0,4.67
+B,large_premarket & green_bar,15pt_pullback,25pt_target,tight_spread,248,0.5363,1.458,1045.0,4.21
+B,large_premarket & green_bar,5pt_pullback,25pt_target,tight_spread,248,0.5363,1.458,1045.0,4.21
+B,below_vwap & large_premarket,15pt_pullback,20pt_target,NO_MBP_FILTER,170,0.5353,1.167,260.0,1.53
+B,below_vwap & large_premarket,5pt_pullback,20pt_target,NO_MBP_FILTER,170,0.5353,1.167,260.0,1.53
+B,below_vwap & large_premarket,15pt_pullback,20pt_target,NO_MBP_FILTER,170,0.5353,1.167,260.0,1.53
+B,below_vwap & large_premarket,5pt_pullback,20pt_target,NO_MBP_FILTER,170,0.5353,1.167,260.0,1.53
+B,below_vwap & large_premarket,15pt_pullback,20pt_target,NO_MBP_FILTER,170,0.5353,1.167,260.0,1.53
+B,below_vwap & large_premarket,15pt_pullback,20pt_target,NO_MBP_FILTER,170,0.5353,1.167,260.0,1.53
+B,below_vwap & large_premarket,15pt_pullback,20pt_target,tight_spread,161,0.5342,1.162,240.0,1.49
+B,below_vwap & large_premarket,15pt_pullback,20pt_target,tight_spread,161,0.5342,1.162,240.0,1.49
+B,below_vwap & large_premarket,15pt_pullback,20pt_target,tight_spread,161,0.5342,1.162,240.0,1.49
+B,below_vwap & large_premarket,5pt_pullback,20pt_target,tight_spread,161,0.5342,1.162,240.0,1.49
+B,below_vwap & large_premarket,5pt_pullback,20pt_target,tight_spread,161,0.5342,1.162,240.0,1.49
+B,below_vwap & large_premarket,15pt_pullback,20pt_target,tight_spread,161,0.5342,1.162,240.0,1.49
+B,green_bar,15pt_pullback,30pt_target,positive_quote_pressure,15,0.5333,1.714,100.0,6.67
+B,green_bar,15pt_pullback,30pt_target,positive_quote_pressure,15,0.5333,1.714,100.0,6.67
+B,large_premarket & green_bar,15pt_pullback,30pt_target,positive_quote_pressure,15,0.5333,1.714,100.0,6.67
+B,large_premarket & green_bar,15pt_pullback,25pt_target,positive_quote_pressure,15,0.5333,1.429,60.0,4.0
+B,green_bar,5pt_pullback,25pt_target,positive_quote_pressure,15,0.5333,1.429,60.0,4.0
+B,green_bar,15pt_pullback,25pt_target,positive_quote_pressure,15,0.5333,1.429,60.0,4.0
+B,green_bar,5pt_pullback,25pt_target,positive_quote_pressure,15,0.5333,1.429,60.0,4.0
+B,large_premarket & green_bar,5pt_pullback,25pt_target,positive_quote_pressure,15,0.5333,1.429,60.0,4.0
+B,green_bar,15pt_pullback,20pt_target,positive_quote_pressure,15,0.5333,1.143,20.0,1.33
+B,CORE_ONLY,10pt_pullback,20pt_target,positive_mid_pressure,15,0.5333,1.143,20.0,1.33
+B,large_premarket & green_bar,15pt_pullback,20pt_target,positive_quote_pressure,15,0.5333,1.143,20.0,1.33
+B,large_premarket,10pt_pullback,20pt_target,positive_mid_pressure,15,0.5333,1.143,20.0,1.33
+B,green_bar,15pt_pullback,20pt_target,positive_quote_pressure,15,0.5333,1.143,20.0,1.33
+B,large_premarket,10pt_pullback,20pt_target,positive_mid_pressure,15,0.5333,1.143,20.0,1.33
+B,large_premarket,10pt_pullback,20pt_target,positive_mid_pressure,15,0.5333,1.143,20.0,1.33
+B,green_bar,15pt_pullback,20pt_target,positive_mid_pressure,15,0.5333,1.143,20.0,1.33
+B,large_premarket,10pt_pullback,20pt_target,positive_mid_pressure,15,0.5333,1.143,20.0,1.33
+B,CORE_ONLY,10pt_pullback,20pt_target,positive_mid_pressure,15,0.5333,1.143,20.0,1.33
+B,CORE_ONLY,10pt_pullback,20pt_target,positive_mid_pressure,15,0.5333,1.143,20.0,1.33
+B,large_premarket & green_bar,15pt_pullback,20pt_target,positive_mid_pressure,15,0.5333,1.143,20.0,1.33
+B,green_bar,15pt_pullback,20pt_target,positive_mid_pressure,15,0.5333,1.143,20.0,1.33
+B,green_bar,15pt_pullback,20pt_target,positive_mid_pressure,15,0.5333,1.143,20.0,1.33
+B,large_premarket & green_bar,15pt_pullback,20pt_target,positive_mid_pressure,15,0.5333,1.143,20.0,1.33
+B,green_bar,15pt_pullback,20pt_target,positive_quote_pressure,15,0.5333,1.143,20.0,1.33
+B,large_premarket & green_bar,15pt_pullback,20pt_target,positive_quote_pressure,15,0.5333,1.143,20.0,1.33
+B,green_bar,15pt_pullback,20pt_target,positive_mid_pressure,15,0.5333,1.143,20.0,1.33
+B,large_premarket & green_bar,15pt_pullback,20pt_target,positive_mid_pressure,15,0.5333,1.143,20.0,1.33
+B,large_premarket & green_bar,15pt_pullback,20pt_target,positive_quote_pressure,15,0.5333,1.143,20.0,1.33
+B,CORE_ONLY,10pt_pullback,20pt_target,positive_mid_pressure,15,0.5333,1.143,20.0,1.33
+B,green_bar,15pt_pullback,20pt_target,positive_quote_pressure,15,0.5333,1.143,20.0,1.33
+B,large_premarket & green_bar,15pt_pullback,20pt_target,positive_quote_pressure,15,0.5333,1.143,20.0,1.33
+B,large_premarket & green_bar,15pt_pullback,20pt_target,positive_mid_pressure,15,0.5333,1.143,20.0,1.33
+B,green_bar,15pt_pullback,20pt_target,positive_quote_pressure,15,0.5333,1.143,20.0,1.33
+B,green_bar,15pt_pullback,20pt_target,positive_mid_pressure,15,0.5333,1.143,20.0,1.33
+B,large_premarket & green_bar,15pt_pullback,20pt_target,positive_mid_pressure,15,0.5333,1.143,20.0,1.33
+B,large_premarket & green_bar,15pt_pullback,20pt_target,positive_quote_pressure,15,0.5333,1.143,20.0,1.33
+B,green_bar,15pt_pullback,20pt_target,positive_quote_pressure,15,0.5333,1.143,20.0,1.33
+B,green_bar,15pt_pullback,20pt_target,positive_mid_pressure,15,0.5333,1.143,20.0,1.33
+B,large_premarket & green_bar,5pt_pullback,20pt_target,positive_mid_pressure,15,0.5333,1.143,20.0,1.33
+B,large_premarket & green_bar,5pt_pullback,20pt_target,positive_quote_pressure,15,0.5333,1.143,20.0,1.33
+B,large_premarket & green_bar,15pt_pullback,20pt_target,positive_quote_pressure,15,0.5333,1.143,20.0,1.33
+B,large_premarket & green_bar,15pt_pullback,20pt_target,positive_mid_pressure,15,0.5333,1.143,20.0,1.33
+B,large_premarket & green_bar,5pt_pullback,20pt_target,positive_mid_pressure,15,0.5333,1.143,20.0,1.33
+B,large_premarket & green_bar,5pt_pullback,20pt_target,positive_quote_pressure,15,0.5333,1.143,20.0,1.33
+B,large_premarket,5pt_pullback,25pt_target,tight_spread,254,0.5315,1.43,1015.0,4.0
+B,large_premarket,15pt_pullback,25pt_target,tight_spread,254,0.5315,1.43,1015.0,4.0
+B,large_premarket & green_bar,15pt_pullback,25pt_target,NO_MBP_FILTER,265,0.5283,1.411,1020.0,3.85
+B,large_premarket & green_bar,5pt_pullback,25pt_target,NO_MBP_FILTER,265,0.5283,1.411,1020.0,3.85
+B,large_premarket,15pt_pullback,25pt_target,NO_MBP_FILTER,272,0.5221,1.376,970.0,3.57
+B,large_premarket,5pt_pullback,25pt_target,NO_MBP_FILTER,272,0.5221,1.376,970.0,3.57
+B,below_vwap & green_bar,5pt_pullback,20pt_target,tight_spread,265,0.5208,1.211,480.0,1.81
+B,below_vwap & green_bar,5pt_pullback,20pt_target,tight_spread,265,0.5208,1.211,480.0,1.81
+B,below_vwap & green_bar,15pt_pullback,20pt_target,tight_spread,265,0.5208,1.211,480.0,1.81
+B,below_vwap & green_bar,15pt_pullback,20pt_target,tight_spread,265,0.5208,1.211,480.0,1.81
+B,below_vwap & green_bar,15pt_pullback,20pt_target,tight_spread,265,0.5208,1.211,480.0,1.81
+B,below_vwap & green_bar,15pt_pullback,20pt_target,tight_spread,265,0.5208,1.211,480.0,1.81
+REJECT,below_vwap & green_bar,15pt_pullback,20pt_target,NO_MBP_FILTER,273,0.5165,1.185,440.0,1.61
+REJECT,below_vwap & green_bar,15pt_pullback,20pt_target,NO_MBP_FILTER,273,0.5165,1.185,440.0,1.61
+REJECT,below_vwap & green_bar,5pt_pullback,20pt_target,NO_MBP_FILTER,273,0.5165,1.185,440.0,1.61
+REJECT,below_vwap & green_bar,15pt_pullback,20pt_target,NO_MBP_FILTER,273,0.5165,1.185,440.0,1.61
+REJECT,below_vwap & green_bar,15pt_pullback,20pt_target,NO_MBP_FILTER,273,0.5165,1.185,440.0,1.61
+REJECT,below_vwap & green_bar,5pt_pullback,20pt_target,NO_MBP_FILTER,273,0.5165,1.185,440.0,1.61
+REJECT,green_bar,15pt_pullback,30pt_target,tight_spread,424,0.5118,1.652,2570.0,6.06
+REJECT,green_bar,15pt_pullback,30pt_target,tight_spread,424,0.5118,1.652,2570.0,6.06
+REJECT,green_bar,15pt_pullback,30pt_target,NO_MBP_FILTER,441,0.5057,1.608,2530.0,5.74
+REJECT,green_bar,15pt_pullback,30pt_target,NO_MBP_FILTER,441,0.5057,1.608,2530.0,5.74
+REJECT,below_vwap & green_bar,10pt_pullback,30pt_target,tight_spread,265,0.5019,1.735,1690.0,6.38
+REJECT,below_vwap & green_bar,10pt_pullback,30pt_target,NO_MBP_FILTER,273,0.5018,1.727,1730.0,6.34
+REJECT,low_volatility,15pt_pullback,30pt_target,NO_MBP_FILTER,152,0.5,1.652,900.0,5.92
+REJECT,low_volatility,15pt_pullback,30pt_target,tight_spread,152,0.5,1.652,900.0,5.92
+REJECT,low_volatility,5pt_pullback,30pt_target,NO_MBP_FILTER,152,0.5,1.652,900.0,5.92
+REJECT,low_volatility,5pt_pullback,30pt_target,tight_spread,152,0.5,1.652,900.0,5.92
+REJECT,below_vwap,15pt_pullback,30pt_target,positive_quote_pressure,8,0.5,1.5,40.0,5.0
+REJECT,below_vwap & large_premarket,15pt_pullback,30pt_target,positive_quote_pressure,8,0.5,1.5,40.0,5.0
+REJECT,below_vwap,15pt_pullback,25pt_target,positive_quote_pressure,8,0.5,1.25,20.0,2.5
+REJECT,below_vwap,5pt_pullback,25pt_target,positive_quote_pressure,8,0.5,1.25,20.0,2.5
+REJECT,below_vwap & large_premarket,5pt_pullback,25pt_target,positive_quote_pressure,8,0.5,1.25,20.0,2.5
+REJECT,below_vwap & large_premarket,15pt_pullback,25pt_target,positive_quote_pressure,8,0.5,1.25,20.0,2.5
+REJECT,below_vwap & large_premarket,15pt_pullback,20pt_target,positive_quote_pressure,8,0.5,1.0,0.0,0.0
+REJECT,below_vwap & large_premarket,5pt_pullback,20pt_target,positive_quote_pressure,8,0.5,1.0,0.0,0.0
+REJECT,below_vwap,15pt_pullback,20pt_target,positive_quote_pressure,8,0.5,1.0,0.0,0.0
+REJECT,below_vwap,15pt_pullback,20pt_target,positive_quote_pressure,8,0.5,1.0,0.0,0.0
+REJECT,below_vwap,5pt_pullback,20pt_target,positive_quote_pressure,8,0.5,1.0,0.0,0.0
+REJECT,below_vwap & large_premarket,5pt_pullback,20pt_target,positive_quote_pressure,8,0.5,1.0,0.0,0.0
+REJECT,below_vwap & large_premarket,15pt_pullback,20pt_target,positive_quote_pressure,8,0.5,1.0,0.0,0.0
+REJECT,below_vwap,5pt_pullback,20pt_target,positive_quote_pressure,8,0.5,1.0,0.0,0.0
+REJECT,below_vwap,15pt_pullback,20pt_target,positive_quote_pressure,8,0.5,1.0,0.0,0.0
+REJECT,below_vwap,15pt_pullback,20pt_target,positive_quote_pressure,8,0.5,1.0,0.0,0.0
+REJECT,below_vwap & large_premarket,15pt_pullback,20pt_target,positive_quote_pressure,8,0.5,1.0,0.0,0.0
+REJECT,below_vwap & large_premarket,15pt_pullback,20pt_target,positive_quote_pressure,8,0.5,1.0,0.0,0.0
+REJECT,CORE_ONLY,15pt_pullback,30pt_target,tight_spread,434,0.4885,1.493,2100.0,4.84
+REJECT,CORE_ONLY,15pt_pullback,30pt_target,tight_spread,434,0.4885,1.493,2100.0,4.84
+REJECT,below_vwap & large_premarket,15pt_pullback,25pt_target,NO_MBP_FILTER,170,0.4824,1.206,350.0,2.06
+REJECT,below_vwap & large_premarket,5pt_pullback,25pt_target,NO_MBP_FILTER,170,0.4824,1.206,350.0,2.06
+REJECT,CORE_ONLY,15pt_pullback,30pt_target,NO_MBP_FILTER,452,0.4823,1.453,2040.0,4.51
+REJECT,CORE_ONLY,15pt_pullback,30pt_target,NO_MBP_FILTER,452,0.4823,1.453,2040.0,4.51
+REJECT,below_vwap,5pt_pullback,25pt_target,NO_MBP_FILTER,287,0.4808,1.259,710.0,2.47
+REJECT,below_vwap,15pt_pullback,25pt_target,NO_MBP_FILTER,287,0.4808,1.259,710.0,2.47
+REJECT,below_vwap,5pt_pullback,25pt_target,tight_spread,278,0.4784,1.25,665.0,2.39
+REJECT,below_vwap,15pt_pullback,25pt_target,tight_spread,278,0.4784,1.25,665.0,2.39
+REJECT,below_vwap & large_premarket,15pt_pullback,25pt_target,tight_spread,161,0.4783,1.188,305.0,1.89
+REJECT,below_vwap & large_premarket,5pt_pullback,25pt_target,tight_spread,161,0.4783,1.188,305.0,1.89
+REJECT,large_premarket,15pt_pullback,30pt_target,tight_spread,254,0.4724,1.364,960.0,3.78
+REJECT,below_vwap & green_bar,5pt_pullback,25pt_target,tight_spread,265,0.4717,1.25,625.0,2.36
+REJECT,below_vwap & green_bar,15pt_pullback,25pt_target,tight_spread,265,0.4717,1.25,625.0,2.36
+REJECT,below_vwap & green_bar,15pt_pullback,25pt_target,NO_MBP_FILTER,273,0.4689,1.231,600.0,2.2
+REJECT,below_vwap & green_bar,5pt_pullback,25pt_target,NO_MBP_FILTER,273,0.4689,1.231,600.0,2.2
+REJECT,large_premarket & green_bar,15pt_pullback,30pt_target,tight_spread,248,0.4677,1.338,880.0,3.55
+REJECT,green_bar,15pt_pullback,30pt_target,positive_mid_pressure,15,0.4667,1.312,50.0,3.33
+REJECT,green_bar,15pt_pullback,30pt_target,positive_mid_pressure,15,0.4667,1.312,50.0,3.33
+REJECT,large_premarket & green_bar,15pt_pullback,30pt_target,positive_mid_pressure,15,0.4667,1.312,50.0,3.33
+REJECT,large_premarket & green_bar,5pt_pullback,25pt_target,positive_mid_pressure,15,0.4667,1.094,15.0,1.0
+REJECT,green_bar,15pt_pullback,25pt_target,positive_mid_pressure,15,0.4667,1.094,15.0,1.0
+REJECT,large_premarket & green_bar,15pt_pullback,25pt_target,positive_mid_pressure,15,0.4667,1.094,15.0,1.0
+REJECT,CORE_ONLY,10pt_pullback,25pt_target,positive_mid_pressure,15,0.4667,1.094,15.0,1.0
+REJECT,large_premarket,10pt_pullback,25pt_target,positive_mid_pressure,15,0.4667,1.094,15.0,1.0
+REJECT,green_bar,5pt_pullback,25pt_target,positive_mid_pressure,15,0.4667,1.094,15.0,1.0
+REJECT,green_bar,5pt_pullback,25pt_target,positive_mid_pressure,15,0.4667,1.094,15.0,1.0
+REJECT,CORE_ONLY,15pt_pullback,20pt_target,positive_mid_pressure,15,0.4667,0.875,-20.0,-1.33
+REJECT,CORE_ONLY,15pt_pullback,20pt_target,positive_mid_pressure,15,0.4667,0.875,-20.0,-1.33
+REJECT,large_premarket,15pt_pullback,20pt_target,positive_mid_pressure,15,0.4667,0.875,-20.0,-1.33
+REJECT,CORE_ONLY,15pt_pullback,20pt_target,positive_mid_pressure,15,0.4667,0.875,-20.0,-1.33
+REJECT,large_premarket,15pt_pullback,20pt_target,positive_mid_pressure,15,0.4667,0.875,-20.0,-1.33
+REJECT,large_premarket,15pt_pullback,20pt_target,positive_mid_pressure,15,0.4667,0.875,-20.0,-1.33
+REJECT,CORE_ONLY,15pt_pullback,20pt_target,positive_mid_pressure,15,0.4667,0.875,-20.0,-1.33
+REJECT,CORE_ONLY,15pt_pullback,20pt_target,positive_mid_pressure,15,0.4667,0.875,-20.0,-1.33
+REJECT,large_premarket,15pt_pullback,20pt_target,positive_mid_pressure,15,0.4667,0.875,-20.0,-1.33
+REJECT,large_premarket,15pt_pullback,20pt_target,positive_mid_pressure,15,0.4667,0.875,-20.0,-1.33
+REJECT,large_premarket,15pt_pullback,20pt_target,positive_mid_pressure,15,0.4667,0.875,-20.0,-1.33
+REJECT,CORE_ONLY,15pt_pullback,20pt_target,positive_mid_pressure,15,0.4667,0.875,-20.0,-1.33
+REJECT,large_premarket,15pt_pullback,30pt_target,NO_MBP_FILTER,272,0.4632,1.312,900.0,3.31
+REJECT,large_premarket & green_bar,15pt_pullback,30pt_target,NO_MBP_FILTER,265,0.4604,1.298,840.0,3.17
+REJECT,below_vwap & large_premarket,15pt_pullback,30pt_target,NO_MBP_FILTER,170,0.4294,1.165,310.0,1.82
+REJECT,below_vwap & large_premarket,15pt_pullback,30pt_target,tight_spread,161,0.4286,1.163,290.0,1.8
+REJECT,below_vwap,15pt_pullback,30pt_target,NO_MBP_FILTER,287,0.4146,1.144,450.0,1.57
+REJECT,below_vwap,15pt_pullback,30pt_target,tight_spread,278,0.4137,1.142,430.0,1.55
+REJECT,below_vwap & green_bar,15pt_pullback,30pt_target,tight_spread,265,0.4,1.104,300.0,1.13
+REJECT,below_vwap & green_bar,15pt_pullback,30pt_target,tight_spread,265,0.4,1.104,300.0,1.13
+REJECT,CORE_ONLY,10pt_pullback,30pt_target,positive_mid_pressure,15,0.4,1.0,0.0,0.0
+REJECT,CORE_ONLY,15pt_pullback,30pt_target,positive_mid_pressure,15,0.4,1.0,0.0,0.0
+REJECT,large_premarket,10pt_pullback,30pt_target,positive_mid_pressure,15,0.4,1.0,0.0,0.0
+REJECT,large_premarket,15pt_pullback,30pt_target,positive_mid_pressure,15,0.4,1.0,0.0,0.0
+REJECT,CORE_ONLY,15pt_pullback,30pt_target,positive_mid_pressure,15,0.4,1.0,0.0,0.0
+REJECT,CORE_ONLY,5pt_pullback,25pt_target,positive_mid_pressure,15,0.4,0.833,-30.0,-2.0
+REJECT,CORE_ONLY,5pt_pullback,25pt_target,positive_mid_pressure,15,0.4,0.833,-30.0,-2.0
+REJECT,large_premarket,15pt_pullback,25pt_target,positive_mid_pressure,15,0.4,0.833,-30.0,-2.0
+REJECT,large_premarket,5pt_pullback,25pt_target,positive_mid_pressure,15,0.4,0.833,-30.0,-2.0
+REJECT,CORE_ONLY,15pt_pullback,25pt_target,positive_mid_pressure,15,0.4,0.833,-30.0,-2.0
+REJECT,below_vwap & green_bar,15pt_pullback,30pt_target,NO_MBP_FILTER,273,0.3956,1.08,240.0,0.88
+REJECT,below_vwap & green_bar,15pt_pullback,30pt_target,NO_MBP_FILTER,273,0.3956,1.08,240.0,0.88
+REJECT,CORE_ONLY,15pt_pullback,30pt_target,positive_quote_pressure,16,0.375,0.9,-20.0,-1.25
+REJECT,large_premarket,15pt_pullback,30pt_target,positive_quote_pressure,16,0.375,0.9,-20.0,-1.25
+REJECT,CORE_ONLY,15pt_pullback,30pt_target,positive_quote_pressure,16,0.375,0.9,-20.0,-1.25
+REJECT,CORE_ONLY,5pt_pullback,25pt_target,positive_quote_pressure,16,0.375,0.75,-50.0,-3.12
+REJECT,large_premarket,5pt_pullback,25pt_target,positive_quote_pressure,16,0.375,0.75,-50.0,-3.12
+REJECT,CORE_ONLY,15pt_pullback,25pt_target,positive_quote_pressure,16,0.375,0.75,-50.0,-3.12
+REJECT,large_premarket,15pt_pullback,25pt_target,positive_quote_pressure,16,0.375,0.75,-50.0,-3.12
+REJECT,CORE_ONLY,5pt_pullback,25pt_target,positive_quote_pressure,16,0.375,0.75,-50.0,-3.12
+REJECT,CORE_ONLY,15pt_pullback,20pt_target,positive_quote_pressure,16,0.375,0.6,-80.0,-5.0
+REJECT,large_premarket,15pt_pullback,20pt_target,positive_quote_pressure,16,0.375,0.6,-80.0,-5.0
+REJECT,large_premarket,15pt_pullback,20pt_target,positive_quote_pressure,16,0.375,0.6,-80.0,-5.0
+REJECT,CORE_ONLY,15pt_pullback,20pt_target,positive_quote_pressure,16,0.375,0.6,-80.0,-5.0
+REJECT,large_premarket,15pt_pullback,20pt_target,positive_quote_pressure,16,0.375,0.6,-80.0,-5.0
+REJECT,CORE_ONLY,15pt_pullback,20pt_target,positive_quote_pressure,16,0.375,0.6,-80.0,-5.0
+REJECT,large_premarket,15pt_pullback,20pt_target,positive_quote_pressure,16,0.375,0.6,-80.0,-5.0
+REJECT,large_premarket,15pt_pullback,20pt_target,positive_quote_pressure,16,0.375,0.6,-80.0,-5.0
+REJECT,CORE_ONLY,15pt_pullback,20pt_target,positive_quote_pressure,16,0.375,0.6,-80.0,-5.0
+REJECT,large_premarket,15pt_pullback,20pt_target,positive_quote_pressure,16,0.375,0.6,-80.0,-5.0
+REJECT,CORE_ONLY,15pt_pullback,20pt_target,positive_quote_pressure,16,0.375,0.6,-80.0,-5.0
+REJECT,CORE_ONLY,15pt_pullback,20pt_target,positive_quote_pressure,16,0.375,0.6,-80.0,-5.0

@@ -1,0 +1,2 @@
+trades,wins,losses,winrate,profit_factor,avg_trade,median_trade,std_trade,gross_win,gross_loss,net_points,max_drawdown
+484,86,398,0.1777,0.4334,-9.32,-20.0,23.0,3449.75,7960,-4510.25,4590.25

@@ -1,0 +1,7 @@
+model,trades,wins,winrate,net_points,avg_trade,profit_factor,max_dd
+combo_large_avg_trade,19,19,100.0,389.77,20.51,,0.0
+combo_plus_9ct,34,32,94.12,643.84,18.94,36.63,-18.07
+combo_8_10,48,44,91.67,920.15,19.17,26.82,-18.07
+combo_base,20,18,90.0,335.7,16.79,19.58,-18.07
+combo_relaxed_mae,24,19,79.17,343.94,14.33,8.5,-18.07
+combo_high_mfe,15,11,73.33,203.31,13.55,5.22,-25.32

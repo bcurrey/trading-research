@@ -1,0 +1,5 @@
+model,trades,winrate,net_points,avg_trade,max_dd_points,active_months,active_years,gross_win,gross_loss,pnl_std,profit_factor,trades_per_month,net_to_dd,max_consecutive_losses
+ATR_8_PLUS,1107,0.6405,6236.75,5.63,-121.75,96,9,14109.5,7872.75,19.1,1.792,11.53,51.23,5
+PROD_STACK_STRICT,819,0.6374,4429.0,5.41,-151.5,100,9,9574.25,5145.25,17.88,1.861,8.19,29.23,6
+VWAP_ALIGN,1485,0.6316,7939.75,5.35,-140.0,101,9,18070.0,10130.25,18.59,1.784,14.7,56.71,6
+VWAP_EMA20_ALIGN,1484,0.6321,7959.75,5.36,-140.0,101,9,18070.0,10110.25,18.59,1.787,14.69,56.86,6

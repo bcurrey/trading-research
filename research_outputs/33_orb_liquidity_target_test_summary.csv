@@ -1,0 +1,4 @@
+model,trades,winrate,net_points,avg_trade,max_dd_points,gross_win,gross_loss,avg_tp_dist,profit_factor
+FIXED_TP20_BASELINE,1485,0.6316,7939.75,5.35,-140.0,18070.0,10130.25,20.0,1.784
+LIQ_TP_20_80_ONLY,1040,0.5212,6799.25,6.54,-273.0,15861.75,9062.5,38.02,1.75
+LIQ_TP_20_80_FALLBACK20,1485,0.5515,8665.0,5.84,-185.75,20986.25,12321.25,31.55,1.703

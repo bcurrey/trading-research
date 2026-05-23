@@ -1,0 +1,61 @@
+ORB RETEST PRODUCTION CANDIDATE — PINE REPLICATION RULES
+
+PRIMARY MODEL TO BUILD FIRST:
+VWAP_ALIGN
+
+BACKTEST SOURCE:
+D:\TradingResearch\research_outputs\30_orb_retest_quality_refinement_trades.csv
+
+TIMEZONE:
+America/Chicago
+
+CHART:
+NQ / MNQ 1-minute chart.
+
+OPENING RANGE:
+8:30 AM CT through 8:59 AM CT.
+OR High = highest high during opening range.
+OR Low = lowest low during opening range.
+
+TRADE WINDOW:
+9:00 AM CT through 11:30 AM CT.
+
+ONE TRADE:
+One trade max per day.
+
+LONG SIGNAL:
+1. After OR completes, price breaks above OR High.
+2. Breakout bar closes above VWAP.
+3. Wait up to 30 bars for retest.
+4. Retest condition:
+   - low <= OR High + 4 points
+   - close >= OR High
+5. Entry is OR High.
+6. Stop = entry - 20 points.
+7. Target = entry + 20 points.
+
+SHORT SIGNAL:
+1. After OR completes, price breaks below OR Low.
+2. Breakout bar closes below VWAP.
+3. Wait up to 30 bars for retest.
+4. Retest condition:
+   - high >= OR Low - 4 points
+   - close <= OR Low
+5. Entry is OR Low.
+6. Stop = entry + 20 points.
+7. Target = entry - 20 points.
+
+VWAP_EMA20_ALIGN VERSION:
+Same as VWAP_ALIGN, but adds:
+LONG breakout close must be above EMA20.
+SHORT breakout close must be below EMA20.
+
+IMPORTANT:
+This indicator should not repaint.
+OR levels lock after 8:59 AM CT.
+Signals only appear after retest confirmation.
+No same-bar TP/SL assumption is used in Pine; Pine indicator only marks signal/entry/SL/TP levels.
+
+NEXT VALIDATION STEP:
+Load the recent_200_signals CSV.
+Compare plotted Pine signals against these dates/times.

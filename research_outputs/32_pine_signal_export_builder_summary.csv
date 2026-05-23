@@ -1,0 +1,3 @@
+model,trades,winrate,net_points,avg_trade,gross_win,gross_loss,profit_factor
+VWAP_EMA20_ALIGN,1484,0.6321,7959.75,5.36,18070.0,10110.25,1.787
+VWAP_ALIGN,1485,0.6316,7939.75,5.35,18070.0,10130.25,1.784

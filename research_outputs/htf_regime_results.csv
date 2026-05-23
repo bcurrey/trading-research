@@ -1,0 +1,283 @@
+conditions,trades,winrate,profit_factor,avg_trade,net_points,max_drawdown,sharpe,expectancy_score
+low_volatility & large_premarket,173,0.4971,18.9651,149.54,25869.75,120.0,5.83,4906.23
+low_volatility,189,0.4921,17.3898,140.48,26551.5,140.0,5.67,4617.26
+large_premarket,358,0.3659,10.4161,101.0,36157.75,241.5,4.51,3766.22
+low_volatility & large_prior_day,78,0.5128,24.2093,184.48,14389.75,100.0,6.33,3483.65
+low_volatility & large_premarket & large_prior_day,75,0.52,24.8388,184.35,13826.5,100.0,6.25,3434.34
+low_volatility & large_premarket & below_vwap,124,0.4919,17.05,137.2,17013.0,120.0,6.52,2900.72
+low_volatility & below_vwap,139,0.4892,15.5203,127.44,17714.75,140.0,6.31,2749.38
+large_premarket & below_vwap,258,0.3721,10.1457,95.71,24693.5,360.0,5.05,2505.34
+below_vwap,344,0.375,8.6771,82.57,28405.25,600.0,4.87,2464.75
+compressed & large_premarket & below_vwap,132,0.4015,13.4155,124.16,16388.5,420.0,5.45,2198.6
+compressed & below_vwap,181,0.4088,11.2931,105.77,19145.25,460.0,5.24,2162.1
+compressed & large_premarket,166,0.4096,11.6461,106.46,17672.5,300.0,5.12,2058.15
+compressed,222,0.4144,9.9792,92.22,20472.5,320.0,4.95,2042.98
+expanded & low_volatility & large_premarket,27,0.4815,27.4708,235.3,6353.0,40.0,6.85,1745.22
+large_premarket & large_prior_day,179,0.3408,9.8471,97.86,17517.25,300.0,4.19,1724.94
+large_prior_day,217,0.318,8.3406,87.28,18938.75,440.0,4.02,1579.61
+bull_trend & low_volatility & large_premarket,75,0.4933,16.7224,121.59,9119.0,100.0,6.57,1524.92
+expanded & low_volatility,29,0.4483,23.5464,217.69,6313.0,80.0,6.52,1486.49
+compressed & low_volatility,104,0.5096,12.9936,103.79,10794.25,220.0,5.3,1402.56
+compressed & low_volatility & below_vwap,84,0.4881,13.9783,117.42,9863.5,240.0,5.56,1378.75
+bull_trend & low_volatility,78,0.4744,15.1547,116.14,9059.0,100.0,6.37,1372.86
+compressed & low_volatility & large_premarket,92,0.5,13.5406,109.05,10032.5,200.0,5.34,1358.46
+compressed & low_volatility & large_premarket & below_vwap,72,0.4722,14.7905,126.41,9101.75,220.0,5.66,1346.2
+expanded & large_premarket & large_prior_day,46,0.3261,15.6527,178.38,8205.5,200.0,5.1,1284.38
+bull_trend & low_volatility & large_premarket & large_prior_day,35,0.5714,23.1094,151.61,5306.25,60.0,9.46,1226.24
+bull_trend & low_volatility & large_premarket & below_vwap,38,0.5,20.0225,150.18,5706.75,120.0,6.94,1142.63
+expanded & large_premarket,66,0.3182,12.3712,134.39,8869.5,200.0,4.46,1097.26
+bull_trend & low_volatility & large_prior_day,37,0.5405,19.808,142.33,5266.25,60.0,9.02,1043.14
+low_volatility & below_vwap & large_lower_wick,49,0.449,15.4978,136.1,6669.0,120.0,5.82,1033.55
+large_premarket & large_prior_day & strong_body,52,0.3846,14.4082,134.08,6972.25,100.0,5.43,1004.57
+bull_trend & low_volatility & below_vwap,40,0.475,17.6669,141.67,5666.75,120.0,6.68,1001.14
+expanded,84,0.3095,10.37,111.55,9370.0,280.0,4.13,971.67
+large_prior_day & strong_body,65,0.3538,12.1219,123.2,8007.75,140.0,5.35,970.69
+low_volatility & large_premarket & below_vwap & large_lower_wick,43,0.4419,15.8681,138.31,5947.25,140.0,5.67,943.72
+bull_trend & compressed & low_volatility,38,0.5789,18.8536,131.55,4999.0,160.0,6.09,942.49
+bull_trend & compressed & low_volatility & large_premarket,38,0.5789,18.8536,131.55,4999.0,160.0,6.09,942.49
+expanded & large_prior_day,58,0.2759,11.2635,138.03,8005.5,300.0,4.37,901.7
+compressed & high_volatility & large_premarket & below_vwap,60,0.3167,12.0405,121.45,7286.75,260.0,5.21,877.36
+compressed & high_volatility & below_vwap,97,0.3402,9.438,95.69,9281.75,240.0,4.95,876.01
+large_premarket & below_vwap & large_lower_wick,94,0.3723,9.8108,93.73,8810.75,180.0,4.53,864.4
+compressed & large_premarket & below_vwap & large_lower_wick,48,0.375,13.0153,135.17,6488.25,200.0,5.39,844.46
+bull_trend & compressed & low_volatility & below_vwap,25,0.52,19.9977,167.18,4179.5,200.0,6.71,835.81
+bull_trend & compressed & low_volatility & large_premarket & below_vwap,25,0.52,19.9977,167.18,4179.5,200.0,6.71,835.81
+low_volatility & below_vwap & strong_body,30,0.5,21.9861,125.92,3777.5,40.0,9.23,830.53
+low_volatility & strong_body,41,0.5122,17.5652,113.13,4638.25,60.0,8.3,814.72
+below_vwap & large_lower_wick,128,0.3516,7.999,78.74,10078.5,200.0,4.32,806.18
+low_volatility & large_premarket & below_vwap & strong_body,27,0.4444,21.6528,137.69,3717.5,40.0,9.7,804.94
+low_volatility & large_premarket & strong_body,38,0.4737,17.3509,120.48,4578.25,60.0,8.58,794.37
+strong_body,134,0.3657,7.9094,74.25,9949.5,200.0,4.36,786.94
+large_premarket & strong_body,91,0.3626,9.6287,89.13,8111.0,120.0,4.52,780.99
+compressed & high_volatility,118,0.3305,8.0132,82.02,9678.25,240.0,4.63,775.54
+compressed & high_volatility & large_premarket,74,0.2973,9.8837,103.24,7640.0,220.0,4.86,755.12
+compressed & low_volatility & below_vwap & large_lower_wick,28,0.4286,16.8411,158.41,4435.5,160.0,6.23,746.99
+low_volatility & large_lower_wick,65,0.4154,10.953,101.06,6569.0,180.0,4.89,719.5
+bull_trend & large_premarket,158,0.3354,6.8705,64.65,10214.75,320.0,4.3,701.81
+compressed & below_vwap & large_lower_wick,66,0.3485,9.8328,107.06,7066.25,180.0,4.84,694.81
+low_volatility & large_prior_day & below_vwap,53,0.434,12.3604,102.89,5453.0,120.0,7.66,674.01
+low_volatility & large_premarket & large_lower_wick,58,0.4138,11.1159,101.16,5867.25,200.0,4.73,652.2
+bull_trend & large_premarket & below_vwap,85,0.3412,8.9256,83.92,7133.0,320.0,4.71,636.66
+large_premarket & large_prior_day & bull_fvg,25,0.36,16.7437,151.14,3778.5,80.0,4.57,632.66
+compressed & large_premarket & large_lower_wick,59,0.339,9.817,107.6,6348.25,240.0,4.7,623.21
+bull_trend & below_vwap,97,0.3196,7.8741,77.95,7561.5,420.0,4.55,595.4
+high_volatility,295,0.2712,4.4804,44.83,13225.5,580.0,2.96,592.55
+low_volatility & large_premarket & large_prior_day & below_vwap,50,0.44,12.1131,97.8,4889.75,120.0,7.52,592.3
+large_premarket & large_lower_wick,123,0.3333,6.9208,69.32,8526.0,260.0,3.79,590.07
+high_volatility & below_vwap,205,0.2976,5.3107,52.15,10690.5,582.25,3.71,567.74
+large_premarket & bull_fvg,46,0.3478,11.2604,107.07,4925.0,140.0,4.0,554.58
+bull_trend & compressed & below_vwap,54,0.3333,9.6799,106.09,5728.75,220.0,5.0,554.54
+bull_trend,205,0.3024,5.2543,51.47,10550.75,360.0,3.79,554.37
+compressed & low_volatility & large_lower_wick,35,0.4,12.5145,125.01,4375.5,220.0,5.41,547.57
+high_volatility & large_premarket,185,0.2432,5.2867,55.61,10288.0,361.5,3.02,543.89
+compressed & large_lower_wick,81,0.3333,7.7904,85.51,6926.25,220.0,4.24,539.59
+large_lower_wick,173,0.3121,5.5659,55.95,9679.75,260.0,3.52,538.77
+bull_trend & compressed & large_premarket & below_vwap,47,0.3404,10.2862,110.64,5200.25,220.0,5.01,534.91
+large_prior_day & below_vwap & strong_body,39,0.3333,11.8731,111.52,4349.25,200.0,8.12,516.39
+bull_trend & compressed,78,0.359,7.9908,82.46,6431.5,220.0,4.45,513.93
+bull_trend & compressed & large_premarket,67,0.3731,8.7365,87.76,5879.75,200.0,4.52,513.69
+below_vwap & strong_body,91,0.3626,7.6957,69.16,6294.0,180.0,6.29,484.37
+strong_trend & large_premarket & large_prior_day,60,0.3,8.3727,93.39,5603.25,252.25,3.96,469.14
+strong_trend & strong_body,37,0.3514,10.4332,117.28,4339.25,120.0,4.15,452.72
+bull_trend & large_premarket & below_vwap & large_lower_wick,30,0.3333,12.3477,121.04,3631.25,100.0,5.0,448.37
+bull_fvg,58,0.3276,8.8281,86.38,5010.0,120.0,3.6,442.29
+strong_trend & expanded & large_premarket,27,0.3333,12.625,129.17,3487.5,127.5,4.07,440.3
+strong_trend & large_prior_day,81,0.2593,6.7846,79.98,6478.75,340.0,3.77,439.56
+high_volatility & large_premarket & below_vwap,134,0.2612,5.6832,57.32,7680.5,601.5,3.49,436.5
+large_prior_day & bull_fvg,30,0.3,11.8191,122.62,3678.5,140.0,4.03,434.77
+strong_trend & high_volatility & strong_body,26,0.3462,11.7934,141.14,3669.75,120.0,4.34,432.79
+compressed & low_volatility & large_premarket & large_lower_wick,30,0.3667,11.6875,121.12,3633.75,240.0,5.0,424.69
+compressed & strong_body,52,0.4808,10.8025,75.4,3921.0,120.0,8.12,423.57
+high_volatility & large_prior_day & strong_body,45,0.2667,8.8471,104.63,4708.25,260.0,4.09,416.54
+large_prior_day & below_vwap,144,0.3056,5.4907,51.77,7454.5,437.25,4.99,409.3
+high_volatility & large_premarket & large_prior_day & strong_body,32,0.2812,10.1819,114.77,3672.75,220.0,3.97,373.95
+expanded & strong_body,28,0.3571,10.9294,120.57,3376.0,127.5,3.86,368.98
+bull_trend & compressed & below_vwap & large_lower_wick,29,0.2759,10.2928,121.77,3531.25,140.0,4.94,363.46
+compressed & low_volatility & large_prior_day,33,0.5455,12.4094,82.98,2738.25,100.0,7.37,339.8
+bull_trend & below_vwap & large_lower_wick,36,0.3056,9.4554,98.65,3551.25,140.0,4.42,335.78
+large_premarket & large_prior_day & below_vwap & strong_body,34,0.3235,10.3934,93.93,3193.75,180.0,7.63,331.94
+compressed & below_vwap & strong_body,44,0.4318,9.8138,76.12,3349.25,120.0,7.73,328.69
+bull_trend & compressed & large_premarket & large_lower_wick,32,0.2812,9.3601,109.73,3511.25,220.0,4.65,328.66
+strong_trend & expanded,32,0.2812,9.4688,105.86,3387.5,227.5,3.61,320.75
+large_premarket & below_vwap & strong_body,64,0.3125,7.3713,67.7,4332.5,180.0,6.06,319.36
+bull_trend & large_premarket & large_prior_day,87,0.2989,5.9446,60.24,5241.25,220.0,5.08,311.57
+high_volatility & strong_body,93,0.3011,5.5787,57.11,5311.25,443.0,3.13,296.3
+large_premarket & large_prior_day & below_vwap,123,0.3008,5.1543,46.61,5733.0,420.0,4.82,295.5
+bull_trend & strong_trend & low_volatility & large_premarket,46,0.4348,8.8863,72.01,3312.25,160.0,5.46,294.34
+compressed & high_volatility & large_premarket & below_vwap & large_lower_wick,25,0.36,10.315,111.78,2794.5,140.0,4.88,288.25
+compressed & large_prior_day,81,0.3704,6.3015,56.29,4559.25,200.0,5.68,287.3
+bull_trend & strong_trend & low_volatility,47,0.4255,8.4824,70.05,3292.25,160.0,5.36,279.26
+expanded & below_vwap,45,0.3556,7.9515,77.24,3475.75,280.0,6.0,276.37
+bull_trend & compressed & large_lower_wick,38,0.2632,7.5986,90.3,3431.25,240.0,4.14,260.73
+bull_trend & large_prior_day,113,0.2566,4.5722,48.05,5429.75,320.0,4.33,248.26
+strong_trend,160,0.2625,3.9649,38.91,6226.25,644.75,2.53,246.86
+compressed & high_volatility & strong_body,30,0.4,9.8652,82.74,2482.25,140.0,7.88,244.88
+expanded & large_premarket & below_vwap,34,0.3529,8.1881,84.57,2875.25,180.0,5.92,235.43
+strong_trend & large_premarket,118,0.2712,4.4887,43.76,5163.25,672.25,2.55,231.76
+high_volatility & large_premarket & strong_body,53,0.283,6.3527,66.66,3532.75,380.0,2.92,224.42
+strong_trend & low_volatility & large_premarket,57,0.4211,6.8076,57.06,3252.25,220.0,4.75,221.4
+compressed & high_volatility & large_premarket & large_lower_wick,29,0.3103,8.1434,93.6,2714.5,140.0,4.36,221.05
+bull_trend & low_volatility & large_lower_wick,26,0.3462,9.3946,90.4,2350.5,160.0,4.29,220.82
+bull_trend & large_premarket & large_lower_wick,51,0.2745,6.3539,67.19,3426.5,200.0,3.53,217.72
+strong_trend & low_volatility,58,0.4138,6.5728,55.73,3232.25,220.0,4.67,212.45
+compressed & low_volatility & large_premarket & large_prior_day,32,0.5312,9.8958,66.72,2135.0,100.0,6.8,211.28
+compressed & high_volatility & below_vwap & strong_body,26,0.3846,9.1606,81.61,2121.75,140.0,7.42,194.36
+compressed & large_premarket & strong_body,33,0.4242,9.0337,63.3,2088.75,120.0,8.68,188.69
+bull_trend & strong_trend & large_premarket & large_prior_day,46,0.2826,6.1,66.52,3060.0,192.25,4.99,186.66
+expanded & high_volatility & large_premarket & large_prior_day,29,0.1724,7.1345,88.84,2576.5,200.0,2.97,183.82
+compressed & low_volatility & large_prior_day & below_vwap,25,0.48,9.2159,72.3,1807.5,160.0,7.35,166.58
+high_volatility & large_premarket & below_vwap & large_lower_wick,51,0.3137,5.7725,56.15,2863.5,240.0,3.4,165.3
+expanded & high_volatility,55,0.2364,5.2458,55.58,3057.0,280.0,2.52,160.37
+compressed & high_volatility & below_vwap & large_lower_wick,38,0.2895,6.0591,69.23,2630.75,180.0,3.65,159.4
+compressed & large_prior_day & below_vwap,67,0.3134,5.0196,46.79,3135.25,417.25,5.01,157.38
+bull_trend & large_premarket & bull_fvg,25,0.32,8.2606,75.51,1887.75,80.0,4.76,155.94
+high_volatility & below_vwap & large_lower_wick,79,0.2911,4.4791,43.16,3409.5,320.0,3.16,152.71
+high_volatility & large_prior_day,139,0.2086,3.3209,32.73,4549.0,667.0,2.17,151.07
+expanded & large_prior_day & below_vwap,27,0.2963,7.1507,77.45,2091.25,240.0,5.81,149.54
+bull_trend & strong_trend & large_prior_day,66,0.2273,4.4672,50.43,3328.5,320.0,4.14,148.69
+expanded & high_volatility & large_premarket,39,0.2051,5.6602,64.53,2516.5,221.5,2.49,142.44
+large_premarket & below_vwap & bull_fvg,27,0.3333,7.6143,68.59,1852.0,140.0,4.5,141.02
+bull_trend & large_lower_wick,69,0.2319,4.3464,46.56,3212.5,280.0,2.82,139.63
+high_volatility & large_premarket & large_prior_day,104,0.2115,3.6362,35.49,3690.75,487.0,2.14,134.2
+compressed & large_premarket & large_prior_day,69,0.3623,4.8024,39.68,2737.75,180.0,5.14,131.48
+strong_trend & high_volatility & large_prior_day,58,0.1379,4.2622,52.87,3066.5,541.5,2.37,130.7
+high_volatility & large_prior_day & below_vwap & strong_body,27,0.2593,6.6779,71.5,1930.5,280.0,5.85,128.92
+compressed & high_volatility & large_lower_wick,46,0.2826,4.9855,55.45,2550.75,223.75,3.2,127.17
+expanded & high_volatility & large_prior_day,39,0.1538,5.0275,61.96,2416.5,300.0,2.39,121.49
+below_vwap & bull_fvg,34,0.2941,6.0,55.88,1900.0,140.0,4.06,114.0
+bull_trend & expanded & large_premarket & large_prior_day,25,0.24,6.2603,71.54,1788.5,140.0,5.57,111.97
+bull_trend & below_vwap & strong_body,30,0.3,6.2221,59.18,1775.5,180.0,5.65,110.47
+bull_trend & bull_fvg,33,0.303,5.9072,56.51,1864.75,120.0,4.03,110.16
+high_volatility & large_premarket & large_lower_wick,65,0.2615,4.0916,40.9,2658.75,280.0,2.77,108.78
+bull_trend & large_prior_day & below_vwap,58,0.2586,4.3622,42.9,2488.0,520.0,4.38,108.53
+high_volatility & below_vwap & strong_body,61,0.2951,4.3112,41.25,2516.5,403.5,4.62,108.49
+bull_trend & large_prior_day & strong_body,38,0.2368,5.0803,55.84,2121.75,200.0,4.75,107.79
+bull_trend & large_premarket & large_prior_day & strong_body,26,0.2692,6.2914,65.12,1693.25,140.0,5.4,106.53
+large_prior_day & displacement & strong_body,27,0.2593,6.0779,63.94,1726.5,140.0,5.05,104.94
+strong_trend & high_volatility & large_premarket & large_prior_day,37,0.1351,4.7776,59.22,2191.0,393.75,2.23,104.68
+compressed & large_premarket & below_vwap & strong_body,26,0.3077,6.7577,57.58,1497.0,160.0,7.45,101.16
+bull_trend & large_premarket & strong_body,42,0.3571,5.1935,45.93,1929.0,180.0,4.69,100.18
+high_volatility & large_lower_wick,108,0.25,3.1307,28.8,3110.75,360.0,2.44,97.39
+bull_trend & strong_body,62,0.3065,4.098,37.98,2354.5,260.0,4.02,96.49
+bull_trend & strong_trend & large_premarket,95,0.2737,3.3793,29.05,2760.0,492.25,3.03,93.27
+bull_trend & expanded & large_premarket,35,0.2571,5.2107,50.53,1768.5,140.0,4.57,92.15
+bull_trend & strong_trend,132,0.25,2.8159,24.21,3196.0,500.0,2.73,90.0
+strong_trend & high_volatility,102,0.1765,2.9697,29.35,2994.0,677.25,1.73,88.91
+strong_trend & compressed & large_prior_day,30,0.2667,5.3553,55.17,1655.0,160.0,4.43,88.63
+bull_trend & large_premarket & large_prior_day & below_vwap,49,0.2653,4.3325,40.81,1999.5,420.0,4.42,86.63
+displacement & strong_body,53,0.2642,4.003,37.4,1982.0,240.0,3.92,79.34
+large_prior_day & displacement,34,0.2353,4.742,48.43,1646.5,180.0,4.23,78.08
+displacement,62,0.2581,3.6381,33.19,2057.75,180.0,3.7,74.86
+bull_trend & large_premarket & below_vwap & strong_body,25,0.32,5.7962,49.88,1247.0,160.0,5.6,72.28
+compressed & high_volatility & large_prior_day,48,0.25,3.9371,37.94,1821.0,300.0,4.37,71.69
+bull_trend & compressed & high_volatility & below_vwap,29,0.1724,4.521,53.42,1549.25,260.0,3.2,70.04
+below_vwap & displacement,34,0.2647,4.6425,42.85,1457.0,120.0,4.75,67.64
+bull_trend & expanded & large_prior_day,35,0.2,4.1317,46.53,1628.5,240.0,4.18,67.29
+bull_trend & high_volatility & below_vwap,57,0.2105,3.4931,33.24,1894.75,420.0,2.59,66.19
+below_vwap & displacement & strong_body,30,0.2333,4.6146,43.38,1301.25,160.0,4.6,60.05
+bull_trend & expanded,45,0.2222,3.6808,35.74,1608.5,240.0,3.6,59.21
+strong_trend & high_volatility & large_premarket,61,0.1311,3.0772,31.33,1911.0,673.75,1.51,58.8
+high_volatility & large_prior_day & below_vwap,91,0.2308,2.6962,21.99,2001.5,584.25,2.95,53.96
+bull_trend & compressed & large_prior_day,37,0.2703,3.808,37.95,1404.0,240.0,3.76,53.46
+large_premarket & large_prior_day & displacement,26,0.2308,4.5563,43.77,1138.0,200.0,4.01,51.85
+bull_trend & high_volatility & large_premarket & below_vwap,47,0.2128,3.3771,30.35,1426.25,360.0,2.33,48.17
+strong_trend & displacement,26,0.2692,4.2294,42.23,1098.0,120.0,3.68,46.44
+bull_trend & compressed & high_volatility,40,0.15,3.2383,35.81,1432.5,300.0,2.49,46.39
+expanded & large_lower_wick,29,0.2759,4.1104,38.61,1119.75,120.0,3.92,46.03
+compressed & high_volatility & large_prior_day & below_vwap,42,0.2143,3.371,31.61,1327.75,317.25,3.56,44.76
+large_premarket & displacement & strong_body,33,0.2424,3.745,33.27,1098.0,200.0,3.4,41.12
+bull_trend & strong_trend & strong_body,32,0.2812,3.5625,35.23,1127.5,120.0,3.37,40.17
+strong_trend & compressed,66,0.2879,2.6956,22.09,1458.25,360.0,2.54,39.31
+compressed & large_premarket & large_prior_day & below_vwap,56,0.2857,2.9602,23.1,1293.75,460.0,4.01,38.3
+bull_trend & high_volatility & large_premarket & large_lower_wick,27,0.1852,3.59,38.37,1036.0,180.0,2.42,37.19
+high_volatility & below_vwap & displacement,27,0.2963,3.7215,36.29,979.75,180.0,4.43,36.46
+bull_trend & displacement & strong_body,32,0.25,3.4714,32.44,1038.0,120.0,3.11,36.03
+strong_trend & high_volatility & large_prior_day & below_vwap,26,0.1923,3.65,36.69,954.0,221.5,3.51,34.82
+bull_trend & displacement,36,0.2222,3.0375,27.17,978.0,160.0,2.75,29.71
+large_premarket & displacement,41,0.2195,2.9192,24.34,998.0,260.0,2.75,29.13
+bull_trend & high_volatility,127,0.1969,1.8107,11.75,1491.75,620.0,1.33,27.01
+bull_trend & strong_trend & compressed,48,0.2917,2.631,21.07,1011.25,220.0,2.46,26.61
+low_volatility & large_prior_day & large_lower_wick,25,0.4,3.8656,27.51,687.75,120.0,3.54,26.59
+strong_trend & large_prior_day & below_vwap,30,0.1667,2.9864,29.13,874.0,301.5,2.97,26.1
+bull_trend & compressed & large_premarket & large_prior_day,31,0.2581,3.0369,27.6,855.5,200.0,3.13,25.98
+bull_trend & compressed & high_volatility & large_premarket,29,0.1034,2.8349,30.37,880.75,240.0,1.98,24.97
+expanded & high_volatility & below_vwap,29,0.2759,3.1757,25.51,739.75,201.5,4.59,23.49
+bull_trend & high_volatility & large_prior_day & strong_body,29,0.1724,2.833,27.81,806.5,240.0,2.93,22.85
+strong_trend & high_volatility & below_vwap,36,0.1389,2.628,22.61,814.0,361.5,2.51,21.39
+bull_trend & high_volatility & large_premarket,83,0.1928,1.9446,13.2,1095.75,480.0,1.33,21.31
+strong_trend & compressed & low_volatility,29,0.4483,3.1983,22.74,659.5,120.0,2.71,21.09
+strong_trend & compressed & low_volatility & large_premarket,29,0.4483,3.1983,22.74,659.5,120.0,2.71,21.09
+strong_trend & compressed & below_vwap,34,0.1765,2.591,23.4,795.5,400.0,2.53,20.61
+bull_trend & strong_trend & expanded,29,0.2069,2.8106,24.97,724.25,247.5,2.74,20.36
+bull_trend & high_volatility & strong_body,45,0.2667,2.4058,18.74,843.5,223.0,2.43,20.29
+bull_trend & high_volatility & large_lower_wick,43,0.1628,2.2676,20.05,862.0,364.75,1.58,19.55
+strong_trend & compressed & high_volatility,37,0.1622,2.4263,21.59,798.75,420.0,2.42,19.38
+bull_trend & compressed & large_prior_day & below_vwap,30,0.2333,2.6011,23.48,704.5,320.0,2.98,18.33
+high_volatility & large_premarket & large_prior_day & below_vwap,73,0.2055,1.8971,11.55,843.25,587.0,2.11,16.0
+high_volatility & displacement,48,0.25,2.0879,15.41,739.75,300.0,2.42,15.45
+high_volatility & large_premarket & below_vwap & strong_body,37,0.2162,2.23,16.62,615.0,420.0,2.5,13.71
+compressed & high_volatility & large_premarket & large_prior_day,37,0.2162,2.2557,16.29,602.75,280.0,3.39,13.6
+high_volatility & displacement & strong_body,41,0.2439,2.1103,15.71,644.0,340.0,2.36,13.59
+bull_trend & high_volatility & large_prior_day & below_vwap,38,0.1316,2.0931,16.68,634.0,460.0,1.99,13.27
+large_prior_day & below_vwap & large_lower_wick,53,0.283,2.027,12.01,636.75,305.5,2.07,12.91
+strong_trend & below_vwap,53,0.1698,1.8838,12.34,654.0,501.5,1.65,12.32
+bull_trend & high_volatility & large_premarket & strong_body,25,0.32,2.3933,16.72,418.0,140.0,2.42,10.0
+bull_trend & strong_trend & compressed & large_premarket,38,0.2895,1.9156,11.57,439.5,220.0,1.56,8.42
+compressed & large_prior_day & below_vwap & large_lower_wick,27,0.2593,2.009,13.45,363.25,260.0,1.83,7.3
+compressed & large_prior_day & large_lower_wick,29,0.2759,1.9559,12.53,363.25,260.0,1.76,7.1
+bull_trend & high_volatility & displacement & strong_body,26,0.2308,1.9681,13.4,348.5,180.0,1.77,6.86
+large_prior_day & large_lower_wick,73,0.2603,1.4596,5.92,432.0,385.5,1.18,6.31
+bull_trend & strong_trend & compressed & below_vwap,26,0.1923,1.8118,11.87,308.5,280.0,1.57,5.59
+bull_trend & strong_trend & compressed & high_volatility,26,0.1154,1.6946,11.22,291.75,320.0,1.47,4.94
+bull_trend & high_volatility & displacement,29,0.2069,1.6869,9.95,288.5,200.0,1.38,4.87
+high_volatility & bull_fvg,35,0.3143,1.7118,7.73,270.5,120.0,2.58,4.63
+bull_trend & strong_trend & high_volatility & below_vwap,27,0.1111,1.7066,9.94,268.5,300.0,1.34,4.58
+high_volatility & large_prior_day & displacement,25,0.16,1.6712,10.74,268.5,200.0,1.39,4.49
+strong_trend & compressed & large_premarket,52,0.25,1.3707,4.99,259.5,360.0,0.78,3.56
+bull_fvg & strong_body,29,0.3103,1.5904,6.92,200.75,107.5,2.28,3.19
+bull_trend & strong_trend & below_vwap,40,0.15,1.2652,3.71,148.5,400.0,0.6,1.88
+bull_trend & high_volatility & large_prior_day,76,0.1184,1.1319,2.15,163.5,820.0,0.35,1.85
+bull_trend & compressed & large_premarket & large_prior_day & below_vwap,25,0.2,1.3579,5.44,136.0,280.0,1.29,1.85
+large_premarket & large_prior_day & below_vwap & large_lower_wick,44,0.2727,1.227,2.58,113.5,265.5,0.91,1.39
+bull_trend & high_volatility & large_premarket & large_prior_day & below_vwap,31,0.0968,1.2198,3.4,105.5,420.0,0.54,1.29
+compressed & high_volatility & large_premarket & large_prior_day & below_vwap,32,0.1562,1.2034,2.8,89.5,380.0,0.72,1.08
+large_premarket & large_prior_day & large_lower_wick,58,0.2759,1.0411,0.5,28.75,330.25,0.19,0.3
+low_volatility & large_premarket & small_prior_day,26,0.3077,1.0272,0.36,9.25,180.0,0.15,0.1
+high_volatility & large_premarket & large_prior_day & below_vwap & large_lower_wick,27,0.2222,1.0265,0.33,9.0,205.5,0.11,0.09
+low_volatility & small_prior_day,27,0.2963,0.9701,-0.4,-10.75,180.0,-0.17,-0.1
+large_premarket & small_prior_day & below_vwap,28,0.2857,0.8731,-1.81,-50.75,200.0,-0.8,-0.44
+high_volatility & large_prior_day & below_vwap & large_lower_wick,34,0.2353,0.8841,-1.5,-51.0,265.5,-0.57,-0.45
+strong_trend & compressed & large_premarket & below_vwap,25,0.12,0.1579,-12.8,-320.0,360.0,-14.81,-0.51
+bull_trend & expanded & high_volatility & large_prior_day,25,0.08,0.1726,-13.9,-347.5,347.5,-13.45,-0.6
+bull_trend & high_volatility & large_premarket & large_prior_day,52,0.1154,0.9207,-1.25,-65.0,600.0,-0.25,-0.6
+strong_trend & high_volatility & large_premarket & below_vwap,26,0.0769,0.2181,-10.83,-281.5,281.5,-9.81,-0.61
+bull_trend & high_volatility & large_prior_day & large_lower_wick,27,0.0741,0.1636,-14.25,-384.75,384.75,-13.88,-0.63
+high_volatility & large_premarket & large_prior_day & large_lower_wick,35,0.2,0.8422,-2.16,-75.75,270.25,-0.81,-0.64
+bull_trend & strong_trend & large_premarket & below_vwap,32,0.125,0.1818,-11.25,-360.0,400.0,-12.68,-0.65
+compressed & small_prior_day,31,0.129,0.1481,-14.84,-460.0,460.0,-17.57,-0.68
+bull_trend & strong_trend & large_prior_day & large_lower_wick,25,0.12,0.2381,-12.19,-304.75,304.75,-10.73,-0.73
+bull_trend & strong_trend & compressed & large_lower_wick,25,0.2,0.2632,-11.2,-280.0,280.0,-11.06,-0.74
+bull_trend & strong_trend & high_volatility & large_prior_day,49,0.102,0.9003,-1.71,-83.75,500.0,-0.3,-0.75
+high_volatility & large_premarket & displacement,27,0.1852,0.2381,-11.85,-320.0,320.0,-12.03,-0.76
+bull_trend & large_premarket & large_prior_day & large_lower_wick,27,0.1481,0.2881,-10.55,-284.75,284.75,-9.05,-0.82
+small_prior_day & large_lower_wick,28,0.0714,0.212,-14.07,-394.0,420.0,-10.68,-0.84
+strong_trend & large_prior_day & large_lower_wick,29,0.1379,0.2505,-11.89,-344.75,344.75,-10.51,-0.86
+bull_trend & strong_trend & high_volatility,85,0.1529,0.9271,-1.13,-96.25,615.75,-0.25,-0.89
+bull_trend & expanded & high_volatility,30,0.1667,0.3011,-10.25,-307.5,307.5,-8.91,-0.93
+bull_trend & strong_trend & high_volatility & large_premarket & large_prior_day,29,0.1034,0.2661,-12.15,-352.25,352.25,-9.67,-0.94
+strong_trend & compressed & large_lower_wick,33,0.2121,0.28,-10.91,-360.0,360.0,-10.56,-1.01
+bull_trend & strong_trend & large_premarket & large_lower_wick,31,0.1935,0.3375,-9.83,-304.75,324.75,-8.19,-1.03
+bull_trend & large_prior_day & large_lower_wick,37,0.1351,0.2332,-12.02,-444.75,444.75,-11.11,-1.04
+strong_trend & small_prior_day,28,0.1429,0.5745,-6.99,-195.75,380.0,-3.5,-1.12
+bull_trend & strong_trend & high_volatility & large_lower_wick,32,0.0938,0.2986,-11.84,-378.75,378.75,-8.11,-1.13
+strong_trend & large_premarket & below_vwap,43,0.1395,0.2642,-10.27,-441.5,481.5,-9.41,-1.17
+strong_trend & large_premarket & large_lower_wick,41,0.1951,0.3149,-10.36,-424.75,424.75,-8.95,-1.34
+strong_trend & high_volatility & large_lower_wick,41,0.122,0.3049,-11.19,-458.75,458.75,-8.1,-1.4
+bull_trend & strong_trend & high_volatility & large_premarket,49,0.1224,0.2537,-11.27,-552.25,552.25,-9.91,-1.4
+small_prior_day & below_vwap,39,0.2051,0.5821,-6.43,-250.75,330.75,-3.22,-1.46
+high_volatility & small_prior_day,36,0.0833,0.3816,-10.99,-395.75,440.0,-6.22,-1.51
+large_premarket & small_prior_day,41,0.1951,0.5457,-7.09,-290.75,410.75,-3.63,-1.59
+high_volatility & large_prior_day & large_lower_wick,48,0.1875,0.6346,-5.33,-255.75,430.25,-2.26,-1.62
+bull_trend & strong_trend & large_lower_wick,48,0.1667,0.3438,-10.39,-498.75,498.75,-7.56,-1.71
+strong_trend & large_lower_wick,62,0.1935,0.363,-9.66,-598.75,598.75,-7.28,-2.17
+small_prior_day,63,0.1746,0.5935,-6.45,-406.5,620.0,-3.16,-2.41

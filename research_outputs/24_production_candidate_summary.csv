@@ -1,0 +1,3 @@
+model,trades,wins,losses,winrate,profit_factor,net_points,avg_trade,max_drawdown,avg_mfe,avg_mae,avg_bars_held,profitable_years,years_tested,profitable_years_pct
+large_pm_vwap_green,137,64,72,0.4672,0.889,-160.0,-1.17,-360.0,17.47,-22.88,3.36,3,8,0.375
+core_vwap_green_10pb,199,88,103,0.4422,0.854,-300.0,-1.51,-440.0,16.15,-21.98,5.23,4,9,0.444
