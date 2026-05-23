@@ -1,0 +1,18 @@
+
+PINE IMPLEMENTATION CHECKLIST
+
+1. Detect IFVG proxy
+2. Detect V-reversal proxy
+3. Detect VWAP alignment
+4. Detect liquidity reclaim
+5. Detect relative volume
+6. Detect body percent
+7. Calculate risk distance
+8. Calculate score
+9. Assign grade
+10. Draw zones/labels
+11. Alert conditions
+12. Dashboard
+13. Replay mode
+14. Alert throttling
+15. Multi-timeframe filters

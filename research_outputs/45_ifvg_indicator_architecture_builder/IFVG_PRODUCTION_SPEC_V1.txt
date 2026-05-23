@@ -1,0 +1,157 @@
+
+========================================
+IFVG CONTEXT ENGINE V1
+PRODUCTION SPEC
+========================================
+
+CORE CONCEPT
+-------------
+This is NOT:
+- a pure FVG indicator
+- a breakout indicator
+- a BOS indicator
+
+This is:
+FAILED DIRECTIONAL AUCTION CONTINUATION
+
+Behavior:
+1. directional imbalance forms
+2. imbalance partially fails/reclaims
+3. trapped participants remain
+4. continuation resumes
+
+----------------------------------------
+CORE REQUIRED CONDITION
+----------------------------------------
+
+Bull:
+- bull_ifvg_proxy_fast == true
+
+Bear:
+- bear_ifvg_proxy_fast == true
+
+----------------------------------------
+CORE QUALITY CONDITIONS
+----------------------------------------
+
+Highest importance:
+- directional_v_reversal
+- body_lt_60
+
+Moderate importance:
+- vwap_aligned
+- has_liq_sweep
+
+Conditional:
+- rel_vol_ge_1_25
+- risk_le_20
+
+Weak/avoid:
+- giant momentum expansion candles
+- obvious emotional breakout candles
+
+----------------------------------------
+SCORING ENGINE
+----------------------------------------
+
+Required:
+IFVG proxy
+
+Score:
+VREV           +3
+BODY_LT60      +3
+VWAP           +2
+LIQ reclaim    +2
+RVOL           +1
+RISK20         +1
+
+----------------------------------------
+GRADE LOGIC
+----------------------------------------
+
+A+:
+score >= 9
+
+A:
+score 7-8
+
+B:
+score 5-6
+
+Ignore:
+score < 5
+
+----------------------------------------
+EXPECTED ALERT FREQUENCY
+----------------------------------------
+
+A+:
+~1-3 per month
+
+A/A+:
+~10-17 per month
+
+A/B/A+:
+~25-40 per month
+
+----------------------------------------
+TRADE MANAGEMENT TESTED
+----------------------------------------
+
+3 contract scaleout:
+TP1 = 1R
+TP2 = 1.5R
+TP3 = 2R
+
+After TP1:
+stop to breakeven
+
+After TP2:
+runner stop to TP1
+
+Strict replay included:
+- slippage
+- overlap filtering
+- conservative sequencing
+
+----------------------------------------
+PINE VISUALS
+----------------------------------------
+
+Show:
+- IFVG zones
+- score labels
+- grade labels
+- entry line
+- stop line
+- TP1/TP2/TP3
+- optional dashboard
+
+Alert colors:
+A+ = red
+A = orange
+B = yellow
+
+----------------------------------------
+RECOMMENDED USER WORKFLOW
+----------------------------------------
+
+1. Receive alert
+2. Quick visual HTF check
+3. Avoid major news moments
+4. Execute only clean structures
+5. Use scaleout management
+6. Avoid forcing trades
+
+----------------------------------------
+IMPORTANT FINDINGS
+----------------------------------------
+
+1. BODY_LT60 repeatedly improved PF.
+2. Context mattered more than raw FVG/BOS.
+3. Tight risk alone was NOT edge.
+4. RVOL was conditional.
+5. Scaleouts improved realistic expectancy.
+6. Strict replay materially reduced fake edge.
+7. A+ contextual subsets survived validation.
+
