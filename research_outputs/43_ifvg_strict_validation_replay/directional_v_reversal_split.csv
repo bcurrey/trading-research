@@ -1,0 +1,3 @@
+directional_v_reversal,trades,winrate_scaleout,avg_scaleout_r,pf_scaleout,max_dd_scaleout,tp1_rate,tp2_rate,tp3_rate,avg_risk,avg_mfe,avg_mae
+true,6566,50.96,0.039,1.08,-52.01,50.96,35.46,19.28,10.68,12.24,-9.32
+false,1964,45.62,-0.039,0.929,-108.16,45.62,34.01,20.93,7.76,9.84,-9.15

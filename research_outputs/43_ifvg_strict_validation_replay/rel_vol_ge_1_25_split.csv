@@ -1,0 +1,3 @@
+rel_vol_ge_1_25,trades,winrate_scaleout,avg_scaleout_r,pf_scaleout,max_dd_scaleout,tp1_rate,tp2_rate,tp3_rate,avg_risk,avg_mfe,avg_mae
+false,7123,50.43,0.036,1.072,-62.83,50.43,35.63,19.88,10.13,11.89,-9.1
+true,1407,46.2,-0.051,0.905,-73.17,46.2,32.55,18.55,9.35,10.67,-10.17
