@@ -1,0 +1,43 @@
+
+IFVG PRODUCTION CANDIDATE V1
+
+Core setup:
+- Bull IFVG proxy = long context
+- Bear IFVG proxy = short context
+- Entry concept used in replay: post-signal retrace to 50% of signal candle range
+- Stop concept used in replay:
+  Long: below low of signal/prior 2 bars
+  Short: above high of signal/prior 2 bars
+- Max risk filter: <= 20 NQ points for strongest grade
+
+Current A+ score:
+VWAP aligned: +2
+Directional V-reversal: +2
+Liquidity sweep/reclaim last 30m: +1
+Entry/body candle body_pct < 60%: +2
+Relative volume >= 1.25: +2
+Risk <= 20 points: +1
+
+A+ threshold:
+score >= 8
+
+Trade management tested:
+3 contracts
+TP1 = 1R
+TP2 = 1.5R
+TP3 = 2R
+After TP1: stop to BE
+After TP2: stop to TP1
+1 tick slippage included
+No same-direction overlap within 120 bars
+
+Next Pine indicator requirements:
+- detect bull/bear IFVG proxy
+- detect directional V-reversal proxy
+- calculate VWAP alignment
+- calculate relative volume 20
+- calculate body_pct
+- calculate risk from signal/prior 2 bars
+- calculate liquidity sweep/reclaim last 30m
+- score conditions
+- alert A+, A, B separately
