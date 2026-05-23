@@ -1,7 +1,6 @@
 data_parquet/
 data_raw/
 *.parquet
-*.csv
 *.zip
 *.7z
 __pycache__/
