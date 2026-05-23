@@ -47,7 +47,7 @@ features_small_cols = [
     "range_expansion_20", "body_expansion_20",
     "bear_displacement", "bear_fvg", "bear_fvg_size", "bear_fvg_min_2pt",
     "bull_fvg", "bull_fvg_size", "bull_fvg_min_2pt",
-    "pdh", "pdl", "dol", "vwap", "ny_open",
+    "pdh", "pdl", "dol", "ny_open",
     "dist_dol", "dist_pdh", "dist_pdl", "dist_ny_open",
     "dist_asia_high", "dist_asia_low", "dist_london_high", "dist_london_low",
     "dist_or_high_30m", "dist_or_low_30m",
