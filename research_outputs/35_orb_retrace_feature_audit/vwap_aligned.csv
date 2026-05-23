@@ -1,0 +1,3 @@
+vwap_aligned,trades,wr_1R,wr_1_5R,wr_2R,avg_r_1R,avg_r_1_5R,avg_r_2R,pf_1R,pf_1_5R,pf_2R,avg_risk,avg_mfe,avg_mae,median_mfe,median_mae,max_dd_r_1R,max_dd_r_1_5R,max_dd_r_2R,audit_group
+false,2400,48.08,37.75,29.79,-0.038,-0.056,-0.106,0.926,0.91,0.849,18.71,31.65,-19.03,15.01,-16.74,-118.0,-184.0,-301.0,vwap_aligned
+true,2271,51.7,40.95,32.5,0.034,0.024,-0.025,1.07,1.04,0.963,19.38,34.3,-19.1,17.75,-16.66,-46.0,-91.5,-146.0,vwap_aligned

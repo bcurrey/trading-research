@@ -1,0 +1,2 @@
+directional_displacement,trades,wr_1R,wr_1_5R,wr_2R,avg_r_1R,avg_r_1_5R,avg_r_2R,pf_1R,pf_1_5R,pf_2R,avg_risk,avg_mfe,avg_mae,median_mfe,median_mae,max_dd_r_1R,max_dd_r_1_5R,max_dd_r_2R,audit_group
+false,4653,49.75,39.2,30.99,-0.005,-0.02,-0.07,0.99,0.967,0.898,19.04,32.84,-19.09,16.29,-16.75,-86.0,-184.5,-415.0,directional_displacement
