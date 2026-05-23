@@ -7,7 +7,7 @@ warnings.filterwarnings('ignore')
 
 ROOT = Path(r'D:\TradingResearch')
 TRADES_PATH = ROOT / r'ict_trade_study\outputs\ict_keeper_trades_clean.csv'
-NQ_PATH = ROOT / r'data_parquet\NQ_feature_factory.parquet'
+NQ_PATH = ROOT / r'data_parquet\NQ_feature_factory_ict_context.parquet'
 OUTDIR = ROOT / r'ict_trade_study\outputs'
 OUT_FEATURES = OUTDIR / 'ict_trade_enhanced_features.csv'
 OUT_REVIEW = OUTDIR / 'ict_trade_enhanced_review.csv'
