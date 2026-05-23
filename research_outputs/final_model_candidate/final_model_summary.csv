@@ -1,0 +1,7 @@
+model,trades,wins,losses,winrate,net_points,avg_trade,profit_factor,max_dd
+pdh_vwap,23,23,0,100.0,438.51,19.07,,0.0
+pdh_dol,22,22,0,100.0,421.9,19.18,,0.0
+pdh_vwap_relvol,14,14,0,100.0,256.76,18.34,,0.0
+balanced,12,12,0,100.0,218.51,18.21,,0.0
+pdh_lt_minus78,28,26,2,92.86,474.9,16.96,32.14,-8.44
+current_49,49,38,11,77.55,601.13,12.27,7.65,-23.94
