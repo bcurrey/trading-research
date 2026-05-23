@@ -1,0 +1,5 @@
+group,trades,wins,losses,winrate,net_points,avg_trade,profit_factor
+SNIPER_FILE,23,23,0,100.0,438.51,19.07,
+BROAD_ENGINE,7899,3039,4860,38.47,4166.25,0.53,1.09
+,,,,,,,
+BROAD_NOT_SNIPER,7899,3039,4860,38.47,4166.25,0.53,1.09
