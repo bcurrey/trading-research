@@ -1,4 +1,4 @@
-# 37_two_stage_signal_backtest.py
+# 37_two_stage_signal_backtest.py FIXED
 
 from pathlib import Path
 import polars as pl
@@ -22,7 +22,15 @@ print("Loading signals...")
 signals = pl.read_csv(SIGNALS, try_parse_dates=True)
 
 print("Loading features...")
-features = pl.read_parquet(FEATURES).sort("ts_ct").with_row_index("idx")
+features = (
+    pl.read_parquet(FEATURES)
+    .sort("ts_ct")
+    .with_row_index("idx")
+    .with_columns([
+        pl.col("ts_ct").dt.year().alias("year"),
+        pl.col("ts_ct").dt.strftime("%Y-%m").alias("month"),
+    ])
+)
 
 signals = signals.join(
     features.select(["idx", "ts_ct", "open", "high", "low", "close"]),
@@ -31,7 +39,17 @@ signals = signals.join(
     how="left"
 )
 
-bars = features.select(["ts_ct", "year", "month", "hour_ct", "minute_ct", "open", "high", "low", "close"]).to_dicts()
+bars = features.select([
+    "ts_ct",
+    "year",
+    "month",
+    "hour_ct",
+    "minute_ct",
+    "open",
+    "high",
+    "low",
+    "close"
+]).to_dicts()
 
 trades = []
 
@@ -51,6 +69,7 @@ for s in signals.iter_rows(named=True):
 
     entry = float(entry_bar["open"])
     stop = max(float(s["high"]), float(entry_bar["high"])) + 2.0
+
     risk = stop - entry
 
     if risk <= 0 or risk > 30:
