@@ -1,0 +1,6 @@
+feature,true_count,false_count,true_pct
+bear_fvg,6,17,26.09
+bull_fvg,0,23,0.0
+bear_displacement,0,23,0.0
+bull_displacement,12,11,52.17
+any_liquidity_sweep_reclaim_last_30m,23,0,100.0
