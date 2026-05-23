@@ -1,0 +1,11 @@
+.venv/
+Tools/
+data_parquet/
+data_raw/
+reports/
+research_outputs/
+ict_trade_study/discord_export/
+ict_trade_study/discord_export.zip
+*.mp4
+*.parquet
+*.zip
