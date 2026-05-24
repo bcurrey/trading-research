@@ -1,0 +1,9 @@
+4H FVG TP1 Timing Summary
+total_trades=11
+tp1_hit_count=11
+tp1_miss_count=0
+tp1_hit_pct=100.0
+avg_minutes_to_tp1=2.36
+median_minutes_to_tp1=0.0
+fastest_minutes_to_tp1=0.0
+slowest_minutes_to_tp1=12.0
