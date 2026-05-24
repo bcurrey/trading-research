@@ -1,0 +1,5 @@
+time_bucket,direction,touched_fvgs,reject_25_count,reject_50_count,reject_75_count,reject_100_count,reject_25_pct,reject_50_pct,reject_75_pct,reject_100_pct,avg_mfe_points,avg_mae_points,avg_touch_depth_pct,pct_gt_15m_before_25,pct_gt_30m_before_25,pct_gt_60m_before_25,pct_gt_15m_before_50,pct_gt_30m_before_50,pct_gt_60m_before_50
+NY_MORNING_0830_1130,bearish,31,30,26,23,22,96.77,83.87,74.19,70.97,112.19,128.29,9.78,9.68,6.45,0.0,12.9,6.45,0.0
+NY_MORNING_0830_1130,bullish,51,42,38,31,28,82.35,74.51,60.78,54.9,104.09,266.75,15.38,0.0,0.0,0.0,21.57,9.8,1.96
+NY_PM_1200_1500,bearish,23,21,18,17,15,91.3,78.26,73.91,65.22,104.0,39.64,8.82,4.35,4.35,4.35,17.39,4.35,4.35
+NY_PM_1200_1500,bullish,25,23,17,15,12,92.0,68.0,60.0,48.0,110.19,111.7,4.64,24.0,4.0,0.0,40.0,36.0,24.0
