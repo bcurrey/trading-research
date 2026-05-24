@@ -8,10 +8,10 @@ OUT.mkdir(parents=True, exist_ok=True)
 
 now = datetime.now()
 
-print("AUTO TRIGGER TEST2")
+print("CHATGPT DIRECT WRITE TEST SUCCESS")
 print(now)
 
-(OUT / "runner_test.txt").write_text(
-    f"Auto trigger worked at {now}",
+(OUT / "chatgpt_write_test.txt").write_text(
+    f"ChatGPT direct write succeeded at {now}\n",
     encoding="utf-8"
 )
