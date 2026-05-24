@@ -22,6 +22,9 @@ jobs:
         run: |
           cd D:\TradingResearch
 
+          git fetch origin
+          git reset --hard origin/main
+
           $ScriptName = "latest_research.py"
           $ScriptPath = "D:\TradingResearch\scripts\ict\$ScriptName"
 
@@ -59,7 +62,7 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
-          git add research_outputs scripts/ict
+          git add research_outputs
 
           $changes = git status --porcelain
           if ($changes) {
