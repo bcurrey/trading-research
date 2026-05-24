@@ -2,11 +2,12 @@ name: Run Trading Research
 
 on:
   workflow_dispatch:
-    inputs:
-      script_name:
-        description: "Python script inside scripts/ict to run"
-        required: true
-        default: "latest_research.py"
+
+  push:
+    branches:
+      - main
+    paths:
+      - "scripts/ict/latest_research.py"
 
 permissions:
   contents: write
@@ -21,7 +22,7 @@ jobs:
         run: |
           cd D:\TradingResearch
 
-          $ScriptName = "${{ github.event.inputs.script_name }}"
+          $ScriptName = "latest_research.py"
           $ScriptPath = "D:\TradingResearch\scripts\ict\$ScriptName"
 
           New-Item -ItemType Directory -Force -Path "D:\TradingResearch\research_outputs" | Out-Null
