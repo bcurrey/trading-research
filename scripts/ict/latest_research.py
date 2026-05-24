@@ -3,6 +3,7 @@ from datetime import datetime
 import traceback
 import polars as pl
 
+# rerun trigger: 2026-05-24 workflow retry
 ROOT = Path(r"D:\TradingResearch")
 OUT = ROOT / "research_outputs"
 STUDY = OUT / "htf_fvg_study"
