@@ -1,0 +1,2 @@
+matched_rows,mean_ohlc_diff,median_ohlc_diff,max_ohlc_diff,rows_lte_025,rows_gt_025,rows_gt_1,rows_gt_5
+9194,3123.0,3123.0,3123.0,0,9194,9194,9194
