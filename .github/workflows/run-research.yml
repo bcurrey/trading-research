@@ -16,6 +16,10 @@ jobs:
   run-local-research:
     runs-on: self-hosted
 
+    env:
+      PYTHONUTF8: "1"
+      PYTHONIOENCODING: "utf-8"
+
     steps:
       - name: Run research script
         shell: powershell
@@ -25,32 +29,37 @@ jobs:
           git fetch origin
           git reset --hard origin/main
 
+          [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+          $OutputEncoding = [System.Text.Encoding]::UTF8
+          $env:PYTHONUTF8 = "1"
+          $env:PYTHONIOENCODING = "utf-8"
+
           $ScriptName = "latest_research.py"
           $ScriptPath = "D:\TradingResearch\scripts\ict\$ScriptName"
 
           New-Item -ItemType Directory -Force -Path "D:\TradingResearch\research_outputs" | Out-Null
 
-          "RUN_STARTED=$(Get-Date -Format o)" | Out-File "D:\TradingResearch\research_outputs\run_status.txt"
-          "SCRIPT=$ScriptPath" | Add-Content "D:\TradingResearch\research_outputs\run_status.txt"
+          "RUN_STARTED=$(Get-Date -Format o)" | Out-File "D:\TradingResearch\research_outputs\run_status.txt" -Encoding utf8
+          "SCRIPT=$ScriptPath" | Add-Content "D:\TradingResearch\research_outputs\run_status.txt" -Encoding utf8
 
           try {
             py -3.12 $ScriptPath 2>&1 | Tee-Object -FilePath "D:\TradingResearch\research_outputs\last_run_log.txt"
 
             if ($LASTEXITCODE -ne 0) {
-              "STATUS=ERROR" | Add-Content "D:\TradingResearch\research_outputs\run_status.txt"
-              "EXIT_CODE=$LASTEXITCODE" | Add-Content "D:\TradingResearch\research_outputs\run_status.txt"
+              "STATUS=ERROR" | Add-Content "D:\TradingResearch\research_outputs\run_status.txt" -Encoding utf8
+              "EXIT_CODE=$LASTEXITCODE" | Add-Content "D:\TradingResearch\research_outputs\run_status.txt" -Encoding utf8
               exit $LASTEXITCODE
             }
 
-            "STATUS=SUCCESS" | Add-Content "D:\TradingResearch\research_outputs\run_status.txt"
+            "STATUS=SUCCESS" | Add-Content "D:\TradingResearch\research_outputs\run_status.txt" -Encoding utf8
           }
           catch {
-            "STATUS=ERROR" | Add-Content "D:\TradingResearch\research_outputs\run_status.txt"
-            "ERROR=$($_.Exception.Message)" | Add-Content "D:\TradingResearch\research_outputs\run_status.txt"
+            "STATUS=ERROR" | Add-Content "D:\TradingResearch\research_outputs\run_status.txt" -Encoding utf8
+            "ERROR=$($_.Exception.Message)" | Add-Content "D:\TradingResearch\research_outputs\run_status.txt" -Encoding utf8
             throw
           }
           finally {
-            "RUN_FINISHED=$(Get-Date -Format o)" | Add-Content "D:\TradingResearch\research_outputs\run_status.txt"
+            "RUN_FINISHED=$(Get-Date -Format o)" | Add-Content "D:\TradingResearch\research_outputs\run_status.txt" -Encoding utf8
           }
 
       - name: Commit results
@@ -58,6 +67,9 @@ jobs:
         shell: powershell
         run: |
           cd D:\TradingResearch
+
+          [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+          $OutputEncoding = [System.Text.Encoding]::UTF8
 
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
