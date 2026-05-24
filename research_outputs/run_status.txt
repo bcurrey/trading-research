@@ -1,6 +1,5 @@
-status=FAILED
-timestamp=2026-05-24 12:38:46.467789
-message=UnicodeEncodeError: 'charmap' codec can't encode characters in position 15-114: character maps to <undefined>
-STATUS=ERROR
-ERROR=Traceback (most recent call last):
-RUN_FINISHED=2026-05-24T12:38:46.5055226-05:00
+status=SUCCESS
+timestamp=2026-05-24 12:42:14.133128
+message=Calculated 4H FVG average time to TP1
+STATUS=SUCCESS
+RUN_FINISHED=2026-05-24T12:42:14.2034202-05:00
