@@ -1,0 +1,5 @@
+variant,trades,wins,losses,win_rate,net_dollars,net_points_3_contracts,profit_factor,tp1_pct,tp2_pct,tp3_pct,avg_initial_risk_points,max_initial_risk_points,worst_loss_dollars,worst_loss_points_3_contracts
+NO_MAX_SL,11,11,0,100.0,2600.0,1300.0,,100.0,81.82,63.64,94.11,334.0,50.0,25.0
+MAX_SL_100,7,7,0,100.0,1750.0,875.0,,100.0,85.71,71.43,53.11,97.5,50.0,25.0
+MAX_SL_75,5,5,0,100.0,1150.0,575.0,,100.0,80.0,60.0,37.85,56.0,50.0,25.0
+MAX_SL_50,3,3,0,100.0,550.0,275.0,,100.0,66.67,33.33,26.75,46.5,50.0,25.0
