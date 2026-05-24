@@ -1,0 +1,5 @@
+method,null_count,error
+strict_false,-1,"ComputeError('`strptime` / `to_datetime` was called with no format and no time zone, but a time zone is part of the data.\n\nThis was previously allowed but led to unpredictable and erroneous results. Give a format string, set a time zone or perform the operation eagerly on a Series instead of on an Expr.\n\nThis error occurred in the following expression:\n\tcol(""ts_event"").str.strptime([""raise""])\n')"
+iso,0,
+iso_no_z,10,
+space,10,
