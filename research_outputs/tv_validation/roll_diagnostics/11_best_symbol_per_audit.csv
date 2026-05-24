@@ -1,0 +1,4 @@
+file,symbol,tv_start,tv_end,best_constant_offset,matched_rows,mean_diff_after_best_constant_offset,median_diff_after_best_constant_offset,max_diff_after_best_constant_offset,rows_gt_025,mean_close_abs_diff,mean_close_delta,median_close_delta,min_close_delta,max_close_delta,std_close_delta
+TV_AUDIT_2019_02_05_to_2019_05_22.csv,NQH9,2019-02-05,2019-05-23,3162.75,1268,3.7437894321766563,2.8125,25.625,1268,5.503746056782334,3162.6169164037856,3162.75,3116.0,3204.75,8.047356610468603
+TV_AUDIT_2022_04_27_to_2022_08_11.csv,NQU2,2022-04-27,2022-08-11,3087.0,2547,15.995460345504515,11.125,201.875,2547,22.868472712995683,3086.952296819788,3087.0,2860.25,3386.5,35.68424868905879
+TV_AUDIT_2025_06_09_to_2025_06_12.csv,NQM5,2025-06-09,2025-06-12,923.0,3784,0.0000165169133192389,0.0,0.0625,0,0.0,923.0,923.0,923.0,923.0,0.0
