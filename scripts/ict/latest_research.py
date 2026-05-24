@@ -14,10 +14,10 @@ if sys.platform.startswith('win'):
 ROOT = Path(r'D:\TradingResearch')
 OUT = ROOT / 'research_outputs'
 STUDY = OUT / 'htf_fvg_study'
+DATA = ROOT / 'data_parquet' / 'NQ_feature_factory_ict_context.parquet'
+STATUS = OUT / 'run_status.txt'
 OUT.mkdir(parents=True, exist_ok=True)
 STUDY.mkdir(parents=True, exist_ok=True)
-STATUS = OUT / 'run_status.txt'
-DATA = ROOT / 'data_parquet' / 'NQ_feature_factory_ict_context.parquet'
 
 POINT_VALUE = 2.0
 CONTRACTS = 3
@@ -29,7 +29,7 @@ FORCE_EXIT = 14 * 60 + 45
 VARIANTS = [('NO_MAX_SL', None), ('MAX_SL_75', 75.0), ('MAX_SL_50', 50.0)]
 
 
-def write_status(s, msg):
+def status(s, msg):
     STATUS.write_text(f'status={s}\ntimestamp={datetime.now()}\nmessage={msg}\n', encoding='utf-8')
 
 
@@ -37,7 +37,7 @@ def minute(ts):
     return ts.hour * 60 + ts.minute
 
 
-def is_am(ts):
+def is_ny_am(ts):
     m = minute(ts)
     return NY_AM_START <= m < NY_AM_END
 
@@ -46,38 +46,63 @@ def touched(b, lo, hi):
     return b['high'] >= lo and b['low'] <= hi
 
 
+def pf_expr():
+    gw = pl.col('pnl_dollars').filter(pl.col('pnl_dollars') > 0).sum()
+    gl = pl.col('pnl_dollars').filter(pl.col('pnl_dollars') < 0).sum().abs()
+    return pl.when(gl != 0).then(gw / gl).otherwise(None).round(3).alias('profit_factor')
+
+
 def build_fvgs(df, label, every):
-    htf = (
-        df.group_by_dynamic('ts', every=every, period=every, closed='left', label='left')
+    htf = (df.group_by_dynamic('ts', every=every, period=every, closed='left', label='left')
         .agg([
-            pl.col('open').first().alias('open'),
-            pl.col('high').max().alias('high'),
-            pl.col('low').min().alias('low'),
-            pl.col('close').last().alias('close'),
-            pl.len().alias('minute_rows'),
+            pl.col('open').first().alias('open'), pl.col('high').max().alias('high'),
+            pl.col('low').min().alias('low'), pl.col('close').last().alias('close'), pl.len().alias('rows')
         ])
-        .filter(pl.col('minute_rows') >= 10)
+        .filter(pl.col('rows') >= 10)
         .sort('ts')
-        .with_row_index('idx')
-        .with_columns([
-            pl.col('high').shift(2).alias('high_2'),
-            pl.col('low').shift(2).alias('low_2'),
-        ])
-    )
+        .with_row_index('source_idx')
+        .with_columns([pl.col('high').shift(2).alias('high_2'), pl.col('low').shift(2).alias('low_2')]))
     bull = htf.filter(pl.col('low') > pl.col('high_2')).select([
-        pl.lit(label).alias('zone_type'), pl.lit('LONG').alias('side'), pl.col('idx').alias('source_idx'),
-        pl.col('ts').alias('zone_time'), pl.col('high_2').alias('zone_low'), pl.col('low').alias('zone_high')
-    ])
+        pl.lit(label).alias('zone_type'), pl.lit('LONG').alias('side'), 'source_idx',
+        pl.col('ts').alias('zone_time'), pl.col('high_2').alias('zone_low'), pl.col('low').alias('zone_high')])
     bear = htf.filter(pl.col('high') < pl.col('low_2')).select([
-        pl.lit(label).alias('zone_type'), pl.lit('SHORT').alias('side'), pl.col('idx').alias('source_idx'),
-        pl.col('ts').alias('zone_time'), pl.col('high').alias('zone_low'), pl.col('low_2').alias('zone_high')
-    ])
+        pl.lit(label).alias('zone_type'), pl.lit('SHORT').alias('side'), 'source_idx',
+        pl.col('ts').alias('zone_time'), pl.col('high').alias('zone_low'), pl.col('low_2').alias('zone_high')])
     return pl.concat([bull, bear])
 
 
+def bucket_touch_depth(side, lo, hi, touch_bar):
+    size = hi - lo
+    if size <= 0:
+        return 'BAD_SIZE', None
+    if side == 'LONG':
+        px = min(max(touch_bar['low'], lo), hi)
+        pct = ((hi - px) / size) * 100.0
+    else:
+        px = min(max(touch_bar['high'], lo), hi)
+        pct = ((px - lo) / size) * 100.0
+    if pct < 25:
+        b = 'SHALLOW_0_25'
+    elif pct < 50:
+        b = 'MID_25_50'
+    elif pct < 75:
+        b = 'DEEP_50_75'
+    else:
+        b = 'VERY_DEEP_75_100'
+    return b, round(pct, 2)
+
+
+def bucket_size(x):
+    if x <= 10: return '00_10'
+    if x <= 20: return '10_20'
+    if x <= 35: return '20_35'
+    if x <= 50: return '35_50'
+    if x <= 75: return '50_75'
+    return '75_PLUS'
+
+
 def mfe_mae(side, entry, path):
-    mf = 0.0
-    ma = 0.0
+    mf = ma = 0.0
     for b in path:
         if side == 'LONG':
             mf = max(mf, b['high'] - entry)
@@ -88,212 +113,131 @@ def mfe_mae(side, entry, path):
     return round(mf, 2), round(ma, 2)
 
 
-def pf_expr():
-    gross_win = pl.col('pnl_dollars').filter(pl.col('pnl_dollars') > 0).sum()
-    gross_loss = pl.col('pnl_dollars').filter(pl.col('pnl_dollars') < 0).sum().abs()
-    return pl.when(gross_loss != 0).then(gross_win / gross_loss).otherwise(None).round(3).alias('profit_factor')
-
-
-def replay(z, bars, variant, max_sl):
-    side = z['side']
-    lo = float(z['zone_low'])
-    hi = float(z['zone_high'])
-    zone_time = z['zone_time']
-    size = hi - lo
+def replay(z, bars_by_date, dates_sorted, variant, max_sl):
+    side = z['side']; lo = float(z['zone_low']); hi = float(z['zone_high']); size = hi - lo
     if side == 'LONG':
-        entry = hi
-        stop0 = lo - STOP_BUFFER
-        risk = entry - stop0
-        tp1, tp2, tp3 = entry + TP1, entry + TP2, entry + TP3
+        entry = hi; stop0 = lo - STOP_BUFFER; risk = entry - stop0; tps = [entry + TP1, entry + TP2, entry + TP3]
     else:
-        entry = lo
-        stop0 = hi + STOP_BUFFER
-        risk = stop0 - entry
-        tp1, tp2, tp3 = entry - TP1, entry - TP2, entry - TP3
+        entry = lo; stop0 = hi + STOP_BUFFER; risk = stop0 - entry; tps = [entry - TP1, entry - TP2, entry - TP3]
     if max_sl is not None and risk > max_sl:
         return None
 
-    touch_i = None
-    touch_bar = None
-    for i, b in enumerate(bars):
-        ts = b['ts']
-        if ts <= zone_time:
-            continue
-        if not touched(b, lo, hi):
-            continue
-        if is_am(ts):
-            touch_i = i
-            touch_bar = b
+    zone_date = z['zone_time'].date()
+    scan_dates = [d for d in dates_sorted if d >= zone_date]
+    touch_date = touch_i = None; touch_bar = None
+    for d in scan_dates:
+        day = bars_by_date[d]
+        for i, b in enumerate(day):
+            ts = b['ts']
+            if ts <= z['zone_time']:
+                continue
+            if not is_ny_am(ts):
+                continue
+            if touched(b, lo, hi):
+                touch_date, touch_i, touch_bar = d, i, b
+                break
+        if touch_bar is not None:
             break
-        if minute(ts) < NY_AM_START or minute(ts) >= NY_AM_END:
-            break
-    if touch_i is None:
+        if len(scan_dates) > 0 and d > zone_date and d.year == 2026 and len(scan_dates) > 60:
+            pass
+    if touch_bar is None:
         return None
 
-    trade_date = touch_bar['ts'].date()
-    stop = stop0
-    open_ct = CONTRACTS
-    points = 0.0
-    h1 = h2 = h3 = False
-    t1 = t2 = t3 = None
-    exit_time = None
-    exit_reason = None
-    final_price = None
-    path = []
-
-    for b in bars[touch_i:]:
-        ts = b['ts']
-        if ts.date() != trade_date:
-            break
-        path.append(b)
+    depth_bucket, depth_pct = bucket_touch_depth(side, lo, hi, touch_bar)
+    stop = stop0; open_ct = CONTRACTS; points = 0.0
+    hit1 = hit2 = hit3 = False; time1 = time2 = time3 = None
+    exit_time = None; exit_reason = None; final_price = None; path = []
+    for b in bars_by_date[touch_date][touch_i:]:
+        ts = b['ts']; path.append(b)
         if side == 'LONG':
-            stop_hit = b['low'] <= stop
-            hit1, hit2, hit3 = b['high'] >= tp1, b['high'] >= tp2, b['high'] >= tp3
-            force_price = b['close']
+            stop_hit = b['low'] <= stop; h1 = b['high'] >= tps[0]; h2 = b['high'] >= tps[1]; h3 = b['high'] >= tps[2]; force_px = b['close']
         else:
-            stop_hit = b['high'] >= stop
-            hit1, hit2, hit3 = b['low'] <= tp1, b['low'] <= tp2, b['low'] <= tp3
-            force_price = b['close']
-
+            stop_hit = b['high'] >= stop; h1 = b['low'] <= tps[0]; h2 = b['low'] <= tps[1]; h3 = b['low'] <= tps[2]; force_px = b['close']
         if stop_hit:
             points += ((stop - entry) if side == 'LONG' else (entry - stop)) * open_ct
             exit_time, exit_reason, final_price = ts, 'STOP', stop
-            open_ct = 0
             break
-        if (not h1) and hit1:
-            points += TP1
-            open_ct -= 1
-            h1, t1 = True, ts
-            stop = entry
-        if (not h2) and hit2:
-            points += TP2
-            open_ct -= 1
-            h2, t2 = True, ts
-            stop = entry + TP1 if side == 'LONG' else entry - TP1
-        if (not h3) and hit3:
-            points += TP3
-            open_ct -= 1
-            h3, t3 = True, ts
-            exit_time, exit_reason, final_price = ts, 'TP3', tp3
-            open_ct = 0
-            break
+        if (not hit1) and h1:
+            points += TP1; open_ct -= 1; hit1 = True; time1 = ts; stop = entry
+        if (not hit2) and h2:
+            points += TP2; open_ct -= 1; hit2 = True; time2 = ts; stop = entry + TP1 if side == 'LONG' else entry - TP1
+        if (not hit3) and h3:
+            points += TP3; open_ct -= 1; hit3 = True; time3 = ts; exit_time, exit_reason, final_price = ts, 'TP3', tps[2]; break
         if minute(ts) >= FORCE_EXIT:
-            points += ((force_price - entry) if side == 'LONG' else (entry - force_price)) * open_ct
-            exit_time, exit_reason, final_price = ts, 'FORCE_EXIT_1445', force_price
-            open_ct = 0
+            points += ((force_px - entry) if side == 'LONG' else (entry - force_px)) * open_ct
+            exit_time, exit_reason, final_price = ts, 'FORCE_EXIT_1445', force_px
             break
-
     if exit_time is None:
-        last = path[-1] if path else touch_bar
+        last = path[-1]
         final_price = last['close']
         points += ((final_price - entry) if side == 'LONG' else (entry - final_price)) * open_ct
         exit_time, exit_reason = last['ts'], 'EOD_FALLBACK'
-
     mf, ma = mfe_mae(side, entry, path)
     pnl = points * POINT_VALUE
     return {
-        'max_stop_variant': variant, 'zone_id': z['zone_id'], 'zone_type': z['zone_type'], 'side': side,
-        'zone_time': zone_time, 'zone_year': z['zone_year'], 'trade_date': str(trade_date), 'trade_year': touch_bar['ts'].year,
-        'entry_time': touch_bar['ts'], 'exit_time': exit_time, 'exit_reason': exit_reason,
-        'zone_low': round(lo, 2), 'zone_high': round(hi, 2), 'zone_size': round(size, 2),
-        'entry': round(entry, 2), 'stop_initial': round(stop0, 2), 'final_exit_price': round(final_price, 2),
-        'initial_risk_points': round(risk, 2), 'initial_risk_dollars': round(risk * CONTRACTS * POINT_VALUE, 2),
-        'tp1_hit': h1, 'tp2_hit': h2, 'tp3_hit': h3, 'tp1_time': t1, 'tp2_time': t2, 'tp3_time': t3,
+        'variant': variant, 'zone_id': z['zone_id'], 'zone_type': z['zone_type'], 'side': side,
+        'zone_time': z['zone_time'], 'zone_size': round(size, 2), 'zone_size_bucket': bucket_size(size),
+        'trade_date': str(touch_date), 'entry_time': touch_bar['ts'], 'exit_time': exit_time, 'exit_reason': exit_reason,
+        'entry': round(entry, 2), 'stop_initial': round(stop0, 2), 'initial_risk_points': round(risk, 2),
+        'touch_depth_pct': depth_pct, 'touch_depth_bucket': depth_bucket,
+        'tp1_hit': hit1, 'tp2_hit': hit2, 'tp3_hit': hit3, 'tp1_time': time1, 'tp2_time': time2, 'tp3_time': time3,
+        'minutes_to_tp1': round((time1 - touch_bar['ts']).total_seconds()/60, 2) if time1 else None,
+        'minutes_to_tp2': round((time2 - touch_bar['ts']).total_seconds()/60, 2) if time2 else None,
+        'minutes_to_tp3': round((time3 - touch_bar['ts']).total_seconds()/60, 2) if time3 else None,
         'gross_points_3_contracts': round(points, 2), 'pnl_dollars': round(pnl, 2),
-        'mfe_points_from_entry': mf, 'mae_points_from_entry': ma,
-        'r_multiple': round(points / (risk * CONTRACTS), 4) if risk > 0 else None,
-        'win': pnl > 0, 'loss': pnl < 0, 'breakeven': pnl == 0,
+        'mfe_points': mf, 'mae_points': ma, 'win': pnl > 0, 'loss': pnl < 0, 'breakeven': pnl == 0,
     }
 
 
-def summarize(trades, cols):
-    return trades.group_by(cols).agg([
+def summarize(df, cols):
+    return df.group_by(cols).agg([
         pl.len().alias('trades'), pl.col('win').sum().alias('wins'), pl.col('loss').sum().alias('losses'),
-        pl.col('breakeven').sum().alias('breakevens'), (pl.col('win').mean() * 100).round(2).alias('win_rate'),
-        pl.col('pnl_dollars').sum().round(2).alias('net_dollars'),
-        pl.col('gross_points_3_contracts').sum().round(2).alias('net_points_3_contracts'),
-        pl.col('pnl_dollars').mean().round(2).alias('avg_dollars'), pf_expr(),
-        (pl.col('tp1_hit').mean() * 100).round(2).alias('tp1_pct'),
-        (pl.col('tp2_hit').mean() * 100).round(2).alias('tp2_pct'),
-        (pl.col('tp3_hit').mean() * 100).round(2).alias('tp3_pct'),
-        pl.col('initial_risk_points').mean().round(2).alias('avg_initial_risk_points'),
-        pl.col('initial_risk_points').max().round(2).alias('max_initial_risk_points'),
-        pl.col('pnl_dollars').min().round(2).alias('single_worst_loss_dollars'),
-        pl.col('gross_points_3_contracts').min().round(2).alias('single_worst_loss_points_3_contracts'),
-        pl.col('zone_size').mean().round(2).alias('avg_zone_size'),
-        pl.col('zone_size').max().round(2).alias('max_zone_size'),
-        pl.col('mfe_points_from_entry').mean().round(2).alias('avg_mfe_points'),
-        pl.col('mae_points_from_entry').mean().round(2).alias('avg_mae_points'),
+        (pl.col('win').mean()*100).round(2).alias('win_rate'), pl.col('pnl_dollars').sum().round(2).alias('net_dollars'),
+        pl.col('gross_points_3_contracts').sum().round(2).alias('net_points_3_contracts'), pl.col('pnl_dollars').mean().round(2).alias('avg_dollars'), pf_expr(),
+        (pl.col('tp1_hit').mean()*100).round(2).alias('tp1_pct'), (pl.col('tp2_hit').mean()*100).round(2).alias('tp2_pct'),
+        (pl.col('tp3_hit').mean()*100).round(2).alias('tp3_pct'), pl.col('initial_risk_points').mean().round(2).alias('avg_risk_pts'),
+        pl.col('initial_risk_points').max().round(2).alias('max_risk_pts'), pl.col('pnl_dollars').min().round(2).alias('worst_loss_dollars'),
+        pl.col('gross_points_3_contracts').min().round(2).alias('worst_loss_points_3c'), pl.col('mfe_points').mean().round(2).alias('avg_mfe'),
+        pl.col('mae_points').mean().round(2).alias('avg_mae'), pl.col('minutes_to_tp1').mean().round(2).alias('avg_min_to_tp1')
     ]).sort(cols)
 
 
 def main():
-    print('FVG BY YEAR / MAX STOP / WORST LOSSES')
-    print(f'DATA: {DATA}')
+    print('FAST 2026 FVG PROFILE: 30m/1h/4h, max SL, touch depth, worst losses')
     df = (pl.read_parquet(DATA).select([
-        pl.col('ts_ct').cast(pl.Datetime).alias('ts'), pl.col('open').cast(pl.Float64),
-        pl.col('high').cast(pl.Float64), pl.col('low').cast(pl.Float64), pl.col('close').cast(pl.Float64),
-    ]).sort('ts').with_columns([
-        pl.col('ts').dt.date().alias('trade_date'), pl.col('ts').dt.year().alias('year'),
-        ((pl.col('ts').dt.hour() * 60) + pl.col('ts').dt.minute()).alias('minute_of_day'),
-    ]))
+        pl.col('ts_ct').cast(pl.Datetime).alias('ts'), pl.col('open').cast(pl.Float64), pl.col('high').cast(pl.Float64), pl.col('low').cast(pl.Float64), pl.col('close').cast(pl.Float64)
+    ]).filter((pl.col('ts') >= pl.datetime(2026,1,1)) & (pl.col('ts') < pl.datetime(2027,1,1))).sort('ts').with_columns(pl.col('ts').dt.date().alias('date')))
     print(f'Rows loaded: {df.height:,}')
-    print(f'Date range: {df["ts"].min()} -> {df["ts"].max()}')
-    bars = df.to_dicts()
-    zones = (pl.concat([build_fvgs(df, '30m_FVG', '30m'), build_fvgs(df, '1h_FVG', '1h'), build_fvgs(df, '4h_FVG', '4h')])
-        .with_columns([(pl.col('zone_high') - pl.col('zone_low')).alias('zone_size'), pl.col('zone_time').dt.year().alias('zone_year')])
-        .filter(pl.col('zone_size') > 0).sort('zone_time').with_row_index('zone_id'))
-    print('Zones built:')
+    zones = pl.concat([build_fvgs(df,'30m_FVG','30m'), build_fvgs(df,'1h_FVG','1h'), build_fvgs(df,'4h_FVG','4h')]).with_columns((pl.col('zone_high')-pl.col('zone_low')).alias('zone_size')).filter(pl.col('zone_size')>0).sort('zone_time').with_row_index('zone_id')
     print(zones.group_by('zone_type').agg(pl.len().alias('zones')).sort('zone_type'))
-
+    bars_by_date = {r['date']: [] for r in df.select('date').unique().to_dicts()}
+    for b in df.to_dicts():
+        bars_by_date[b['date']].append(b)
+    dates_sorted = sorted(bars_by_date.keys())
     rows = []
-    zrows = zones.to_dicts()
     for label, mx in VARIANTS:
-        print(f'Replaying {label}')
-        n = 0
-        for z in zrows:
-            r = replay(z, bars, label, mx)
-            if r is not None:
-                rows.append(r); n += 1
-        print(f'Trades found for {label}: {n:,}')
-    if not rows:
-        raise RuntimeError('No trades found')
+        print(f'Replay {label}')
+        for z in zones.to_dicts():
+            r = replay(z, bars_by_date, dates_sorted, label, mx)
+            if r: rows.append(r)
+        print(f'Rows so far: {len(rows):,}')
     trades = pl.DataFrame(rows)
-
-    comparison = summarize(trades, ['max_stop_variant', 'zone_type'])
-    by_year = summarize(trades, ['max_stop_variant', 'zone_type', 'trade_year'])
-    by_side_year = summarize(trades, ['max_stop_variant', 'zone_type', 'side', 'trade_year'])
-    worst10 = (trades.sort(['max_stop_variant', 'zone_type', 'trade_year', 'pnl_dollars'])
-        .group_by(['max_stop_variant', 'zone_type', 'trade_year'], maintain_order=True).head(10))
-    loss_profile = (trades.filter(pl.col('pnl_dollars') < 0).group_by(['max_stop_variant', 'zone_type']).agg([
-        pl.len().alias('loss_count'), pl.col('zone_size').mean().round(2).alias('loss_avg_zone_size'),
-        pl.col('zone_size').median().round(2).alias('loss_median_zone_size'), pl.col('zone_size').max().round(2).alias('loss_max_zone_size'),
-        pl.col('initial_risk_points').mean().round(2).alias('loss_avg_initial_risk_points'),
-        pl.col('initial_risk_points').max().round(2).alias('loss_max_initial_risk_points'),
-        pl.col('pnl_dollars').min().round(2).alias('worst_loss_dollars')
-    ]))
-
     outputs = {
-        'latest_63_fvg_scaleout_all_trades.csv': trades,
-        'latest_63_fvg_scaleout_comparison_by_stop.csv': comparison,
-        'latest_63_fvg_scaleout_by_year_by_stop.csv': by_year,
-        'latest_63_fvg_scaleout_by_side_year_by_stop.csv': by_side_year,
-        'latest_63_fvg_scaleout_worst10_by_year.csv': worst10,
-        'latest_63_fvg_scaleout_loss_profile.csv': loss_profile,
+        'latest_fast_2026_fvg_trades.csv': trades,
+        'latest_fast_2026_fvg_summary.csv': summarize(trades, ['variant','zone_type']),
+        'latest_fast_2026_fvg_by_side.csv': summarize(trades, ['variant','zone_type','side']),
+        'latest_fast_2026_fvg_by_size_bucket.csv': summarize(trades, ['variant','zone_type','zone_size_bucket']),
+        'latest_fast_2026_fvg_by_touch_depth.csv': summarize(trades, ['variant','zone_type','touch_depth_bucket']),
+        'latest_fast_2026_fvg_worst10.csv': trades.sort(['variant','zone_type','pnl_dollars']).group_by(['variant','zone_type'], maintain_order=True).head(10),
     }
     for name, frame in outputs.items():
-        p = STUDY / name
-        frame.write_csv(p)
-        print(f'Saved: {p}')
-    print('COMPARISON BY STOP')
-    print(comparison)
-    print('BY YEAR')
-    print(by_year)
-    write_status('SUCCESS', 'Completed full FVG by-year max-stop worst-loss study')
+        p = STUDY / name; frame.write_csv(p); print(f'Saved: {p}')
+    print(outputs['latest_fast_2026_fvg_summary.csv'])
+    status('SUCCESS', 'Completed fast 2026 FVG profile')
 
 try:
     main()
 except Exception as e:
     print(traceback.format_exc())
-    write_status('FAILED', f'{type(e).__name__}: {e}')
+    status('FAILED', f'{type(e).__name__}: {e}')
     raise
