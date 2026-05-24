@@ -1,0 +1,2 @@
+rows,mean_diff,median_diff,max_diff,rows_lte_025,rows_gt_025,rows_gt_1,rows_gt_5
+9194,2692.0,2692.0,2692.0,0,9194,9194,9194
