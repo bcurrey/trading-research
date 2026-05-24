@@ -3,15 +3,12 @@ from datetime import datetime
 
 ROOT = Path(r"D:\TradingResearch")
 OUT = ROOT / "research_outputs"
-
 OUT.mkdir(parents=True, exist_ok=True)
 
 now = datetime.now()
+message = f"Quick pipeline test succeeded at {now}\n"
 
-print("CHATGPT DIRECT WRITE TEST SUCCESS")
-print(now)
+print("QUICK PIPELINE TEST")
+print(message)
 
-(OUT / "chatgpt_write_test.txt").write_text(
-    f"ChatGPT direct write succeeded at {now}\n",
-    encoding="utf-8"
-)
+(OUT / "quick_pipeline_test.txt").write_text(message, encoding="utf-8")
