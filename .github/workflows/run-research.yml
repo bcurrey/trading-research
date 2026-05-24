@@ -1,0 +1,69 @@
+name: Run Trading Research
+
+on:
+  workflow_dispatch:
+    inputs:
+      script_name:
+        description: "Python script inside scripts/ict to run"
+        required: true
+        default: "latest_research.py"
+
+permissions:
+  contents: write
+
+jobs:
+  run-local-research:
+    runs-on: self-hosted
+
+    steps:
+      - name: Run research script
+        shell: powershell
+        run: |
+          cd D:\TradingResearch
+
+          $ScriptName = "${{ github.event.inputs.script_name }}"
+          $ScriptPath = "D:\TradingResearch\scripts\ict\$ScriptName"
+
+          New-Item -ItemType Directory -Force -Path "D:\TradingResearch\research_outputs" | Out-Null
+
+          "RUN_STARTED=$(Get-Date -Format o)" | Out-File "D:\TradingResearch\research_outputs\run_status.txt"
+          "SCRIPT=$ScriptPath" | Add-Content "D:\TradingResearch\research_outputs\run_status.txt"
+
+          try {
+            py -3.12 $ScriptPath 2>&1 | Tee-Object -FilePath "D:\TradingResearch\research_outputs\last_run_log.txt"
+
+            if ($LASTEXITCODE -ne 0) {
+              "STATUS=ERROR" | Add-Content "D:\TradingResearch\research_outputs\run_status.txt"
+              "EXIT_CODE=$LASTEXITCODE" | Add-Content "D:\TradingResearch\research_outputs\run_status.txt"
+              exit $LASTEXITCODE
+            }
+
+            "STATUS=SUCCESS" | Add-Content "D:\TradingResearch\research_outputs\run_status.txt"
+          }
+          catch {
+            "STATUS=ERROR" | Add-Content "D:\TradingResearch\research_outputs\run_status.txt"
+            "ERROR=$($_.Exception.Message)" | Add-Content "D:\TradingResearch\research_outputs\run_status.txt"
+            throw
+          }
+          finally {
+            "RUN_FINISHED=$(Get-Date -Format o)" | Add-Content "D:\TradingResearch\research_outputs\run_status.txt"
+          }
+
+      - name: Commit results
+        if: always()
+        shell: powershell
+        run: |
+          cd D:\TradingResearch
+
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add research_outputs scripts/ict
+
+          $changes = git status --porcelain
+          if ($changes) {
+            git commit -m "Add latest research outputs"
+            git push
+          } else {
+            Write-Host "No changes to commit."
+          }
