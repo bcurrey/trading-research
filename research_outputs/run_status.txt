@@ -1,5 +1,6 @@
-status=SUCCESS
-timestamp=2026-05-24 12:42:14.133128
-message=Calculated 4H FVG average time to TP1
-STATUS=SUCCESS
-RUN_FINISHED=2026-05-24T12:42:14.2034202-05:00
+status=FAILED
+timestamp=2026-05-24 12:46:17.131802
+message=FileNotFoundError: Missing delegated script: D:\TradingResearch\scripts\ict\63_fvg_scaleout_by_year_max_stop_worst_losses.py
+STATUS=ERROR
+ERROR=Traceback (most recent call last):
+RUN_FINISHED=2026-05-24T12:46:17.1621709-05:00
