@@ -8,7 +8,7 @@ OUT.mkdir(parents=True, exist_ok=True)
 
 now = datetime.now()
 
-print("AUTO TRIGGER TEST")
+print("AUTO TRIGGER TEST2")
 print(now)
 
 (OUT / "runner_test.txt").write_text(
