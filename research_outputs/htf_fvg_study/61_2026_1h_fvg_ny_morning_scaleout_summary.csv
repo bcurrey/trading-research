@@ -1,0 +1,2 @@
+group,trades,wins,losses,breakevens,win_rate,net_dollars,net_points_3_contracts,avg_dollars,avg_points_3_contracts,avg_initial_risk_points,avg_initial_risk_dollars,avg_r_multiple,tp1_count,tp2_count,tp3_count,tp1_pct,tp2_pct,tp3_pct,avg_mfe_points,avg_mae_points,profit_factor
+ALL,82,70,12,0,85.37,14717.0,7358.5,179.48,89.74,53.84,323.07,1.19,70,60,33,85.37,73.17,40.24,60.0,6.71,13.203

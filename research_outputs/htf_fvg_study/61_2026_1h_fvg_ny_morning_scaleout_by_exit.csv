@@ -1,0 +1,4 @@
+exit_reason,trades,net_dollars,avg_dollars
+STOP,48,4644.0,96.75
+TP3,33,9900.0,300.0
+FORCE_EXIT_1445,1,173.0,173.0
