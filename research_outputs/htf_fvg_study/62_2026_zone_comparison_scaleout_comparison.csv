@@ -1,0 +1,4 @@
+zone_type,trades,wins,losses,breakevens,win_rate,net_dollars,net_points_3_contracts,avg_dollars,avg_points_3_contracts,profit_factor,tp1_count,tp2_count,tp3_count,tp1_pct,tp2_pct,tp3_pct,avg_initial_risk_points,max_initial_risk_points,avg_initial_risk_dollars,single_worst_loss_dollars,single_worst_loss_points_3_contracts,avg_mfe_points,avg_mae_points
+1h_FVG,82,70,12,0,85.37,14717.0,7358.5,179.48,89.74,13.203,70,60,33,85.37,73.17,40.24,53.84,212.25,323.07,-253.5,-126.75,60.0,6.71
+30m_FVG,130,107,23,0,82.31,19087.0,9543.5,146.82,73.41,10.482,107,79,39,82.31,60.77,30.0,41.71,215.25,250.26,-271.5,-135.75,55.24,7.38
+4h_FVG,11,11,0,0,100.0,2600.0,1300.0,236.36,118.18,,11,9,7,100.0,81.82,63.64,94.11,334.0,564.68,50.0,25.0,75.66,8.75
