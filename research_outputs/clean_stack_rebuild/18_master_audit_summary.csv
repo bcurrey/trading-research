@@ -1,0 +1,6 @@
+test,pass,details
+base_ohlc,true,"{'rows': 2938533, 'bad_high_low': 0, 'open_above_high': 0, 'open_below_low': 0, 'close_above_high': 0, 'close_below_low': 0, 'negative_volume': 0}"
+base_rows,true,2938533
+dups,true,0
+fvg_validity,true,"{'fvg_rows': 53918, 'nonpositive_gap_width': 0, 'gap_low_nulls': 0, 'gap_high_nulls': 0}"
+required_files_exist,true,"['D:\\TradingResearch\\data_parquet\\NQ_front_contract_1m_clean.parquet', 'D:\\TradingResearch\\data_parquet\\NQ_front_contract_feature_factory.parquet', 'D:\\TradingResearch\\data_parquet\\NQ_15m_fvg_catalog.parquet', 'D:\\TradingResearch\\data_parquet\\NQ_1h_fvg_catalog.parquet', 'D:\\TradingResearch\\data_parquet\\NQ_4h_fvg_catalog.parquet']"
