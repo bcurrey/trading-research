@@ -1,0 +1,4 @@
+max_sl,trades_taken,wins,losses_or_breakeven,tp1_hits,tp2_hits,tp3_hits,stopped_count,eod_closed_count,stop_capped_count,gross_profit_contract_points,gross_loss_contract_points,net_contract_points,net_profit_3_mnq_dollars,avg_contract_points_per_trade,avg_dollars_per_trade,biggest_loss_contract_points,biggest_loss_dollars,largest_open_adverse_points,win_rate_pct,profit_factor,total_2026_4h_fvgs,touch_candidates,skipped_due_to_active_trade,no_touch
+100,140,129,11,127,109,92,42,6,44,15712.0,972.75,14739.25,29478.5,105.28035714285714,210.56071428571428,-300.0,-600.0,-154.5,92.14285714285714,16.152145977897714,149,145,5,4
+75,140,129,11,127,109,92,42,6,59,15712.0,897.75,14814.25,29628.5,105.81607142857143,211.63214285714287,-225.0,-450.0,-88.0,92.14285714285714,17.501531606794764,149,145,5,4
+50,140,127,13,125,109,92,42,6,77,15662.0,1050.75,14611.25,29222.5,104.36607142857143,208.73214285714286,-150.0,-300.0,-81.5,90.71428571428571,14.905543659290982,149,145,5,4
