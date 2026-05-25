@@ -1,0 +1,10 @@
+metric,win_avg,loss_avg,difference
+risk,26.75,27.9375,-1.1875
+gap_size,26.5,27.6875,-1.1875
+penetration_points,2.5227,16.8125,-14.2898
+penetration_pct,0.1509,0.7594,-0.6085
+minutes_since_fvg_available,33517.9091,35367.875,-1849.9659
+entry_vs_vwap,,,
+volume,259.6364,225.625,34.0114
+candle_range,12.4773,12.1562,0.321
+body_pct,0.4836,0.5416,-0.0581
