@@ -1,0 +1,3 @@
+timeframe,direction,total_fvgs,touched_10d,reclaimed_after_touch,displacement_count,displacement_touched,displacement_reclaimed,width_ge_5,width_ge_10,width_ge_20,width_ge_30,width_ge_50,avg_width,median_width,touch_rate_pct,reclaim_rate_pct
+1h,bear,212,209,209,41,39,39,187,165,120,103,66,44.70990566037736,28.375,98.58490566037736,98.58490566037736
+1h,bull,266,260,259,28,25,25,226,191,120,93,58,35.94172932330827,18.5,97.74436090225564,97.36842105263158

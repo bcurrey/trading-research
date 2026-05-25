@@ -1,0 +1,11 @@
+timeframe,month,direction,total_fvgs,touched_10d,reclaimed_after_touch,displacement_count,displacement_reclaimed,width_ge_20
+30m,1,bear,94,94,94,19,19,39
+30m,1,bull,126,126,126,15,15,39
+30m,2,bear,84,81,81,21,18,42
+30m,2,bull,93,93,93,9,9,33
+30m,3,bear,114,113,112,19,18,49
+30m,3,bull,109,109,109,12,12,42
+30m,4,bear,82,82,82,13,13,32
+30m,4,bull,151,142,142,22,18,56
+30m,5,bear,13,12,12,3,2,6
+30m,5,bull,26,26,26,7,7,10

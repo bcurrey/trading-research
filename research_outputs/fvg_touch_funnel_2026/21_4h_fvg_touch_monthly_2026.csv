@@ -1,0 +1,10 @@
+timeframe,month,direction,total_fvgs,touched_10d,reclaimed_after_touch,displacement_count,displacement_reclaimed,width_ge_20
+4h,1,bear,22,22,22,3,3,17
+4h,1,bull,21,21,21,3,3,14
+4h,2,bear,11,10,10,1,0,11
+4h,2,bull,13,13,13,2,2,10
+4h,3,bear,20,19,19,5,4,15
+4h,3,bull,18,17,17,4,3,17
+4h,4,bear,11,11,11,2,2,9
+4h,4,bull,26,24,24,6,5,18
+4h,5,bull,7,6,6,1,1,6
