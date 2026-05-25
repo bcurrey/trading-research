@@ -1,0 +1,6 @@
+model,trades_taken,wins,losses_or_breakeven,tp1_hits,tp2_hits,tp3_hits,stopped_count,stop_capped_count,gross_profit_contract_points,gross_loss_contract_points,net_contract_points,net_profit_3_mnq_dollars,avg_contract_points,biggest_loss_contract_points,biggest_loss_dollars,ambiguous_bar_total,win_rate_pct,profit_factor,eligible_candidates,overlap_skips
+baseline_edge_entry,30,26,4,26,16,11,11,19,5598.25,499.5,5098.75,10197.5,169.95833333333334,-222.0,-444.0,4,86.66666666666667,11.207707707707709,31,1
+rejection_close,29,24,5,23,12,9,15,21,4447.5,932.25,3515.25,7030.5,121.21551724137932,-225.0,-450.0,0,82.75862068965517,4.770716009654063,29,0
+displacement_after_touch,24,18,6,17,9,4,13,17,3407.25,1172.25,2235.0,4470.0,93.125,-225.0,-450.0,0,75.0,2.906589891234805,25,1
+depth_25pct,36,20,16,19,8,7,28,12,2233.59375,2486.8125,-253.21875,-506.4375,-7.033854166666667,-225.0,-450.0,12,55.55555555555556,0.8981753751036718,36,0
+depth_50pct,39,22,17,22,6,6,33,9,1676.625,2242.125,-565.5,-1131.0,-14.5,-225.0,-450.0,12,56.41025641025641,0.7477839103529018,39,0
