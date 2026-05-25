@@ -1,0 +1,3 @@
+direction,trades_taken,wins,losses_or_breakeven,net_contract_points,net_profit_3_mnq_dollars,biggest_loss_contract_points,biggest_loss_dollars,win_rate_pct
+bear,9,9,0,725.0,1450.0,25.0,50.0,100.0
+bull,22,20,2,1755.0,3510.0,-86.25,-172.5,90.9090909090909
